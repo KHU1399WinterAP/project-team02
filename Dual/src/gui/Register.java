@@ -258,13 +258,13 @@ public class Register extends javax.swing.JFrame {
     private void registerbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerbuttonActionPerformed
 
         username = usernamefeild.getText();
-        int check = Database.select_allusers(username);
+        int check = Database.count_user(username);
 
         switch(check){
             
             case 0 -> {
                 
-                Database.insert_into_users(new User(usernamefeild.getText(), passwordfeild.getPassword(), 0, 0, 0));
+                Database.insert_into_users(new User(usernamefeild.getText(), passwordfeild.getPassword(), 0, 0, 0 ,1));
                 JOptionPane.showMessageDialog(rootPane, "You successfully have registered!");
                         this.dispose();
                 Dashboard dashboard = new Dashboard();

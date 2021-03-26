@@ -15,9 +15,13 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.FontFormatException;
 import java.awt.Toolkit;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -25,6 +29,7 @@ import java.util.logging.Logger;
  */
 public class Dashboard extends javax.swing.JFrame {
 
+    int x,y;
 
 
     private User active_user = Database.get_user( (Login.username == null) ? Register.username : Login.username);
@@ -35,14 +40,8 @@ public class Dashboard extends javax.swing.JFrame {
     public Dashboard() {
         initComponents();
         my_init();
-        if (Login.username == null) {
-            System.err.println("40");
-        }
-        else{
-            System.err.println("41");
-            this.active_user = Database.get_user(Login.username);
         
-        }
+        
     }
                                                                            
   
@@ -57,6 +56,7 @@ public class Dashboard extends javax.swing.JFrame {
     catch (FontFormatException | IOException e) {
         Logger.getLogger(MainMenu.class.getName()).log(Level.SEVERE, null, e);
         } 
+    click();
     
     
     
@@ -71,8 +71,8 @@ public class Dashboard extends javax.swing.JFrame {
     this.setLocationRelativeTo(null);
     Toolkit tk = this.getToolkit();
     Dimension dim = tk.getScreenSize();
-    int x = (int) dim.getWidth() / 2 - this.getWidth() / 2;
-    int y = (int) dim.getHeight() / 2 - this.getHeight() / 2;
+    this.x = (int) dim.getWidth() / 2 - this.getWidth() / 2;
+    this.y = (int) dim.getHeight() / 2 - this.getHeight() / 2;
     this.setLocation(x, y);
     
     
@@ -82,15 +82,60 @@ public class Dashboard extends javax.swing.JFrame {
 
        
        
-    private void set_icon(){
+    public void set_icon(){
         iconlable.setIcon(MyIcon.myicon(Links.dashboardicon, iconlable));
-        avatarlable.setIcon(MyIcon.myicon(Links.girlskull, avatarlable));
+        switch(active_user.getAvatarid() ){
+        
+        case 1:
+            avatarlable.setIcon(MyIcon.myicon(Links.avatar1,avatarlable));
+        
+            break;
+        
+        case 2:
+            avatarlable.setIcon(MyIcon.myicon(Links.avatar2, avatarlable));
+            break;
+        case 3:
+            avatarlable.setIcon(MyIcon.myicon(Links.avatar3, avatarlable));
+            break;
+        case 4:
+            avatarlable.setIcon(MyIcon.myicon(Links.avatar4, avatarlable));
+            break;
+        case 5:
+            avatarlable.setIcon(MyIcon.myicon(Links.avatar5, avatarlable));
+            break;
+        case 6:
+            avatarlable.setIcon(MyIcon.myicon(Links.avatar6, avatarlable));
+            break;
+        }
     }
         
 
     private void set_dark_icon(){
         iconlable.setIcon(MyIcon.myicon(Links.darkdashboardicon, iconlable));
-        avatarlable.setIcon(MyIcon.myicon(Links.girlskull, avatarlable));
+        switch(active_user.getAvatarid() ){
+        
+        case 1:
+            avatarlable.setIcon(MyIcon.myicon(Links.avatar1,avatarlable));
+        
+            break;
+        
+        case 2:
+            avatarlable.setIcon(MyIcon.myicon(Links.avatar2, avatarlable));
+        
+        case 3:
+            avatarlable.setIcon(MyIcon.myicon(Links.avatar3, avatarlable));
+        
+        case 4:
+            avatarlable.setIcon(MyIcon.myicon(Links.avatar4, avatarlable));
+        
+        case 5:
+            avatarlable.setIcon(MyIcon.myicon(Links.avatar5, avatarlable));
+            
+        case 6:
+            avatarlable.setIcon(MyIcon.myicon(Links.avatar6, avatarlable));
+        
+        
+        }
     }
     
     private void set_forground(){
@@ -208,10 +253,20 @@ public class Dashboard extends javax.swing.JFrame {
     
     
     
+    private void click(){
+    avatarlable.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+
+                    PickAvatar pa = new PickAvatar(x, y, avatarlable);
+
+                    pa.setVisible(true);
+                    
+                }
+
+            });
     
-    
-    
-    
+    }
 
     
     
@@ -265,6 +320,11 @@ public class Dashboard extends javax.swing.JFrame {
         });
 
         logoutbutton.setText("jButton2");
+        logoutbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logoutbuttonActionPerformed(evt);
+            }
+        });
 
         thembutton.setText("jButton1");
         thembutton.addActionListener(new java.awt.event.ActionListener() {
@@ -380,7 +440,9 @@ public class Dashboard extends javax.swing.JFrame {
     private void singleplayerbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_singleplayerbuttonActionPerformed
 
 
-        Si
+        SinglePlayerFrame   spf = new SinglePlayerFrame();
+        this.dispose();
+        spf.setVisible(true);
 
 
 
@@ -401,9 +463,35 @@ public class Dashboard extends javax.swing.JFrame {
         
         
         }
+
         
         
     }//GEN-LAST:event_thembuttonActionPerformed
+
+    private void logoutbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutbuttonActionPerformed
+
+       
+        
+        
+        String[] options = {"yes","no"};
+        int choice = JOptionPane.showOptionDialog(rootPane, "Are you sure?", "LogOut", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options,"no");
+
+        System.err.println(choice);
+
+        
+        if (choice == 0) {
+            MainMenu menu = null;
+            try {
+                menu = new MainMenu();
+            } catch (FontFormatException | IOException | SQLException | ClassNotFoundException ex) {
+                Logger.getLogger(Dashboard.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            this.dispose();
+            menu.setVisible(true);
+            
+        }
+
+    }//GEN-LAST:event_logoutbuttonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -433,10 +521,8 @@ public class Dashboard extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Dashboard().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new Dashboard().setVisible(true);
         });
     }
 

@@ -21,6 +21,9 @@ import javax.swing.ImageIcon;
 public class MyIcon {
     private static Icon imageicon;
     private static BufferedImage img;
+    
+    
+    
     public static Icon myicon(String iconname , Component component){
     try {
         img = ImageIO.read(new File(Links.baseicon + iconname));

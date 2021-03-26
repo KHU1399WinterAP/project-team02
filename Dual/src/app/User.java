@@ -12,14 +12,20 @@ public class User {
     public int settingid;
     public int totallosts;
     public int totalwins;
+    public int avatarid;
     
-    public User(String username, char[] password, int settingid, int totalwins, int totallosts) {
+    public User(String username, char[] password, int settingid, int totalwins, int totallosts, int avatarid) {
         this.username = username;
         this.password = String.valueOf(password);
         this.settingid = settingid;
         this.settingid = settingid;
         this.totallosts = totallosts;
         this.totalwins = totalwins;
+        this.avatarid = avatarid;
+    }
+
+    public int getAvatarid() {
+        return avatarid;
     }
 
     public int getTotallosts() {
@@ -45,8 +51,10 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" + "username=" + username + ", password=" + password + ", settingid=" + settingid + '}';
+        return "User{" + "username=" + username + ", password=" + password + ", settingid=" + settingid + ", totallosts=" + totallosts + ", totalwins=" + totalwins + ", avatarid=" + avatarid + '}';
     }
+
+    
 
     
     

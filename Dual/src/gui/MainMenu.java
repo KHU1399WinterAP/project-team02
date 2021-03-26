@@ -33,7 +33,6 @@ public class MainMenu extends javax.swing.JFrame {
      */
     public MainMenu() throws FileNotFoundException, FontFormatException, IOException, SQLException, ClassNotFoundException {
         
-        Database d = new Database();
          initComponents();
        my_inint();
                
@@ -42,9 +41,7 @@ public class MainMenu extends javax.swing.JFrame {
    
                 
         
-        //12, 174, 75       214, 217, 223)
-        registerbutton.setFocusable(false);
-        loginbutton.setFocusable(false);
+       
       
 
     }
@@ -61,8 +58,9 @@ public class MainMenu extends javax.swing.JFrame {
     catch (FontFormatException | IOException e) {
         Logger.getLogger(MainMenu.class.getName()).log(Level.SEVERE, null, e);
         } 
-    
-    
+        registerbutton.setFocusable(false);
+        loginbutton.setFocusable(false);
+        exitbutton.setFocusable(false);
     
     }
     

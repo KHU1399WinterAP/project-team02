@@ -255,7 +255,7 @@ public class Login extends javax.swing.JFrame {
     private void loginbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginbuttonActionPerformed
 
         username =usernamefeild.getText();
-        int check = Database.select_allusers(username);
+        int check = Database.count_user(username);
 
         switch(check){
 

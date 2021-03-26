@@ -36,7 +36,7 @@ public  class Database {
         }
     }
     
-  public static int select_allusers(String username){
+  public static int count_user(String username){
   
         try {
             int user = -1 ;
@@ -61,6 +61,25 @@ public  class Database {
   
         
  }
+  
+  
+  public static void insert_into_users(User user){
+  
+  Statement statement;
+        try {
+            statement = connection.createStatement();
+            String query = "INSERT INTO users (username,password,settingid,totalwins,totallosts,avatarid) VALUES('" + user.username + "' , '"
+            + user.password + "', '" + user.settingid + "', '" + user.totalwins + "', '" + user.totallosts + "', '" + user.avatarid + "')";
+            statement.executeUpdate(query);
+            System.err.println("3");
+
+        } catch (SQLException ex) {
+            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+            System.err.println("4");
+        }
+  
+  }
+  
   public static User get_user(String username){
   
                 System.err.println("-1");
@@ -83,6 +102,7 @@ public  class Database {
             int z = 0;
             int g = 0;
             int l = 0;
+            int h = 0;
             char[] y = null;
             while (resultSet.next())
                 {
@@ -94,9 +114,10 @@ public  class Database {
              z = resultSet.getInt("settingid");
              g = resultSet.getInt("totalwins");
              l = resultSet.getInt("totallosts");
+             h = resultSet.getInt("avatarid");
             }
 
-                 User user = new User(x, y , z, g, l);
+                 User user = new User(x, y , z, g, l, h);
 
             
             
@@ -112,23 +133,6 @@ public  class Database {
   
         
  }
-  
-  public static void insert_into_users(User user){
-  
-  Statement statement;
-        try {
-            statement = connection.createStatement();
-            String query = "INSERT INTO users (username,password,settingid,totalwins,totallosts) VALUES('" + user.username + "' , '"
-            + user.password + "', '" + user.settingid + "', '" + user.totalwins + "', '" + user.totallosts + "')";
-            statement.executeUpdate(query);
-            System.err.println("3");
-
-        } catch (SQLException ex) {
-            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
-            System.err.println("4");
-        }
-  
-  }
   public static void update_user(User user){
   
   Statement statement;
@@ -136,7 +140,7 @@ public  class Database {
             statement = connection.createStatement();
             String query = "UPDATE users SET password = '" + user.password + 
             "', settingid = '" + user.settingid + "' ,totalwins = '" + user.totalwins + "',totallosts = '" + 
-            user.totallosts + "' WHERE username = '" + user.username + "' ";
+            user.totallosts+ "',avatarid = '" + user.avatarid + "' WHERE username = '" + user.username + "' ";
             statement.executeUpdate(query);
             System.err.println("3");
 
