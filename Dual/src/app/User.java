@@ -7,53 +7,61 @@ package app;
 
 
 public class User {
-    public String username;
+    public String userName;
     public String password;
-    public int settingid;
-    public int totallosts;
-    public int totalwins;
-    public int avatarid;
-    
-    public User(String username, char[] password, int settingid, int totalwins, int totallosts, int avatarid) {
-        this.username = username;
+    public int settingId;
+    public int toatlLosts;
+    public int totalWins;
+    public int avatarId;
+    public int characterId;
+    public User(String username, char[] password, int settingId, int totalWins, int totalLosts, int avatarId, int characterId) {
+        this.userName = username;
         this.password = String.valueOf(password);
-        this.settingid = settingid;
-        this.settingid = settingid;
-        this.totallosts = totallosts;
-        this.totalwins = totalwins;
-        this.avatarid = avatarid;
+        this.settingId = settingId;
+        this.toatlLosts = totalLosts;
+        this.totalWins = totalWins;
+        this.avatarId = avatarId;
+        this.characterId = characterId;
     }
 
-    public int getAvatarid() {
-        return avatarid;
+    public int getAvatarId() {
+        return avatarId;
     }
 
-    public int getTotallosts() {
-        return totallosts;
+    public int getToatlLosts() {
+        return toatlLosts;
     }
 
-    public int getTotalwins() {
-        return totalwins;
+    public int getTotalWins() {
+        return totalWins;
+    }
+
+    public int getCharacterId() {
+        return characterId;
     }
 
     
-    public String getUsername() {
-        return username;
+    public String getUserName() {
+        return userName;
     }
 
     public String getPassword() {
         return password;
     }
 
-    public int getSettingid() {
-        return settingid;
+    public int getSettingId() {
+        return settingId;
     }
 
     @Override
     public String toString() {
-        return "User{" + "username=" + username + ", password=" + password + ", settingid=" + settingid + ", totallosts=" + totallosts + ", totalwins=" + totalwins + ", avatarid=" + avatarid + '}';
+        return "User{" + "userName=" + userName + ", password=" + password + ", settingId=" + settingId + ", toatlLosts=" + toatlLosts + ", totalWins=" + totalWins + ", avatarId=" + avatarId + ", characterId=" + characterId + '}';
     }
 
+   
+ 
+
+   
     
 
     

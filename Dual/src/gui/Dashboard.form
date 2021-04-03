@@ -48,13 +48,13 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="avatarlable" min="-2" pref="50" max="-2" attributes="0"/>
+                          <Component id="avatarLable" min="-2" pref="50" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-                          <Component id="usernamelable" min="-2" pref="201" max="-2" attributes="0"/>
+                          <Component id="userNameLable" min="-2" pref="201" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="379" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="iconlable" pref="112" max="32767" attributes="0"/>
-                              <Component id="appnamelable" max="32767" attributes="0"/>
+                              <Component id="iconLable" pref="112" max="32767" attributes="0"/>
+                              <Component id="appNameLable" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -63,26 +63,26 @@
                               <Group type="102" attributes="0">
                                   <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="totalwinslable1" min="-2" pref="120" max="-2" attributes="0"/>
-                                      <Component id="totallostslable" min="-2" pref="120" max="-2" attributes="0"/>
+                                      <Component id="totalwWinsLable" min="-2" pref="120" max="-2" attributes="0"/>
+                                      <Component id="totalLostsLable" min="-2" pref="120" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="48" pref="48" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="totalwinsnumber" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                                      <Component id="totallostsnumber" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
+                                      <Component id="totalWinsNumber" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                                      <Component id="totalLostsNumber" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="212" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="multiplayerbutton" min="-2" pref="177" max="-2" attributes="0"/>
-                                      <Component id="singleplayerbutton" min="-2" pref="177" max="-2" attributes="0"/>
+                                      <Component id="multiPlayerButton" min="-2" pref="177" max="-2" attributes="0"/>
+                                      <Component id="singlePlayerButton" min="-2" pref="177" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="change" min="-2" pref="214" max="-2" attributes="0"/>
+                                  <Component id="changeCharacter" min="-2" pref="214" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="380" max="-2" attributes="0"/>
-                                  <Component id="thembutton" min="-2" pref="73" max="-2" attributes="0"/>
+                                  <Component id="themButton" min="-2" pref="73" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="logoutbutton" min="-2" pref="73" max="-2" attributes="0"/>
+                                  <Component id="logOutButton" min="-2" pref="73" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -99,42 +99,42 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="appnamelable" min="-2" pref="42" max="-2" attributes="0"/>
+                                  <Component id="appNameLable" min="-2" pref="42" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="iconlable" min="-2" pref="42" max="-2" attributes="0"/>
+                                  <Component id="iconLable" min="-2" pref="42" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="usernamelable" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
+                              <Component id="userNameLable" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                          <Component id="avatarlable" min="-2" pref="55" max="-2" attributes="0"/>
+                          <Component id="avatarLable" min="-2" pref="55" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="singleplayerbutton" alignment="0" min="-2" pref="166" max="-2" attributes="0"/>
-                      <Component id="totalwinslable1" min="-2" pref="65" max="-2" attributes="0"/>
-                      <Component id="totalwinsnumber" min="-2" pref="65" max="-2" attributes="0"/>
+                      <Component id="singlePlayerButton" alignment="0" min="-2" pref="166" max="-2" attributes="0"/>
+                      <Component id="totalwWinsLable" min="-2" pref="65" max="-2" attributes="0"/>
+                      <Component id="totalWinsNumber" min="-2" pref="65" max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="totallostslable" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
-                              <Component id="totallostsnumber" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+                              <Component id="totalLostsLable" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
+                              <Component id="totalLostsNumber" alignment="3" min="-2" pref="65" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                          <Component id="multiplayerbutton" min="-2" pref="166" max="-2" attributes="0"/>
+                          <Component id="multiPlayerButton" min="-2" pref="166" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="change" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
-                      <Component id="thembutton" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="logoutbutton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="changeCharacter" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
+                      <Component id="themButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="logOutButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
               </Group>
@@ -142,76 +142,79 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="iconlable">
+        <Component class="javax.swing.JLabel" name="iconLable">
           <Properties>
             <Property name="text" type="java.lang.String" value="jLabel1"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="change">
+        <Component class="javax.swing.JButton" name="changeCharacter">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton5"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="changeCharacterActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="multiplayerbutton">
+        <Component class="javax.swing.JButton" name="multiPlayerButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton4"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="singleplayerbutton">
+        <Component class="javax.swing.JButton" name="singlePlayerButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton3"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="singleplayerbuttonActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="singlePlayerButtonActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="logoutbutton">
+        <Component class="javax.swing.JButton" name="logOutButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton2"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="logoutbuttonActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="logOutButtonActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="thembutton">
+        <Component class="javax.swing.JButton" name="themButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton1"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="thembuttonActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="themButtonActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="usernamelable">
+        <Component class="javax.swing.JLabel" name="userNameLable">
           <Properties>
             <Property name="text" type="java.lang.String" value="jLabel1"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="appnamelable">
+        <Component class="javax.swing.JLabel" name="appNameLable">
           <Properties>
             <Property name="text" type="java.lang.String" value="jLabel1"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="avatarlable">
+        <Component class="javax.swing.JLabel" name="avatarLable">
           <Properties>
             <Property name="text" type="java.lang.String" value="jLabel1"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="totalwinsnumber">
+        <Component class="javax.swing.JLabel" name="totalWinsNumber">
           <Properties>
             <Property name="text" type="java.lang.String" value="jLabel1"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="totalwinslable1">
+        <Component class="javax.swing.JLabel" name="totalwWinsLable">
           <Properties>
             <Property name="text" type="java.lang.String" value="jLabel1"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="totallostslable">
+        <Component class="javax.swing.JLabel" name="totalLostsLable">
           <Properties>
             <Property name="text" type="java.lang.String" value="jLabel2"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="totallostsnumber">
+        <Component class="javax.swing.JLabel" name="totalLostsNumber">
           <Properties>
             <Property name="text" type="java.lang.String" value="jLabel3"/>
           </Properties>

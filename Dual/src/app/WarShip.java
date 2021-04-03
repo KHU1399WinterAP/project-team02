@@ -5,6 +5,8 @@
  */
 package app;
 
+import gui.Login;
+import gui.Register;
 import java.awt.Image;
 import java.awt.event.KeyEvent;
 import javax.swing.ImageIcon;
@@ -14,61 +16,86 @@ import javax.swing.ImageIcon;
  * @author Amir reza
  */
 public class WarShip {
+    private User activeUser = Database.getUser((Login.userName == null) ? Register.userName : Login.userName);
     
-    
-     private int dx;
-    private int dy;
-    private int x = 40;
-    private int y = 60;
+    public int dx;
+    public int dy;
+    public int x = 40;
+    public int y = 60;
     private int w;
     private int h;
     private Image image;
 
     public WarShip() {
 
+        System.err.println(activeUser);
         loadImage();
     }
 
     private void loadImage() {
+
+        ImageIcon icon; 
+        switch(activeUser.getCharacterId()){
+        case 1 -> {
+            icon = new ImageIcon(Links.BASECHARACTERICON + Links.CHARACTER1);
+            image = icon.getImage();
+            }
+        case 2 -> {
+            icon = new ImageIcon(Links.BASECHARACTERICON + Links.CHARACTER2);
+            image = icon.getImage();
+            }
+        case 3 -> {
+            icon = new ImageIcon(Links.BASECHARACTERICON + Links.CHARACTER3);
+            image = icon.getImage();
+            }
+        case 4 -> {
+            icon = new ImageIcon(Links.BASECHARACTERICON + Links.CHARACTER4);
+            image = icon.getImage();
+            }
+        case 5 -> {
+            icon = new ImageIcon(Links.BASECHARACTERICON + Links.CHARACTER5);
+            image = icon.getImage();
+            }
+        case 6 -> {
+            icon = new ImageIcon(Links.BASECHARACTERICON + Links.CHARACTER6);
+            image = icon.getImage();
+            }
         
-        ImageIcon ii = new ImageIcon(Links.baseicon + Links.warship1);
-       
-        image = ii.getImage();
-       
-        
-        
+        }
+
+
         w = image.getWidth(null);
         h = image.getHeight(null);
     }
 
     public void move() {
-        
+
         x += dx;
         y += dy;
     }
 
     public int getX() {
-        
+
         return x;
     }
 
     public int getY() {
-        
+
         return y;
     }
-    
+
     public int getWidth() {
-        
+
         return w;
     }
-    
+
     public int getHeight() {
-        
+
         return h;
-    }    
+    }
 
     public Image getImage() {
-        
+
         return image;
     }
 
@@ -94,7 +121,7 @@ public class WarShip {
     }
 
     public void keyReleased(KeyEvent e) {
-        
+
         int key = e.getKeyCode();
 
         if (key == KeyEvent.VK_LEFT) {
@@ -113,22 +140,5 @@ public class WarShip {
             dy = 0;
         }
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
 }

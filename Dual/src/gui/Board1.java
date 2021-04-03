@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package app;
+package gui;
 
+import app.MyColor;
+import app.WarShip;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Toolkit;
@@ -20,13 +22,13 @@ import javax.swing.Timer;
  *
  * @author Amir reza
  */
-public class Board extends JPanel implements ActionListener{
-    
+public class Board1 extends JPanel implements ActionListener {
+
     private Timer timer;
     private WarShip warShip;
-    private final int DELAY = 10;
+    private final int DELAY = 20;
 
-    public Board() {
+    public Board1() {
 
         initBoard();
     }
@@ -35,95 +37,78 @@ public class Board extends JPanel implements ActionListener{
 
         addKeyListener((KeyListener) new TAdapter());
         setBackground(MyColor.black);
-	setFocusable(true);
+        setFocusable(true);
+        setSize(800, 600);
 
         warShip = new WarShip();
 
         timer = new Timer(DELAY, this);
-        
-      //Starts the Timer, causing it to start sending action events to its listeners.  
+
+        //Starts the Timer, causing it to start sending action events to its listeners.  
         timer.start();
     }
 
     @Override
     public void paintComponent(Graphics g) {
-                        this.setBackground(MyColor.black);
+        this.setBackground(MyColor.GAMELAYOUTBACKGROUND);
 
         super.paintComponent(g);
 
         doDrawing(g);
-        
-       Toolkit.getDefaultToolkit().sync();
+
+        Toolkit.getDefaultToolkit().sync();
     }
-    
+
     private void doDrawing(Graphics g) {
-        
+
         Graphics2D g2d = (Graphics2D) g;
 
-        g2d.drawImage(warShip.getImage(), warShip.getX(), 
-            warShip.getY(), this);
+        g2d.drawImage(warShip.getImage(), warShip.getX(),
+                warShip.getY(), this);
     }
-    
-   // @Override
-   /// public void actionPerformed(ActionEvent e) {
-        
-     //  
-    //}
-    
+
     private void step() {
-                this.setBackground(MyColor.black);
+        this.setBackground(MyColor.black);
 
         warShip.move();
-        
-        repaint(warShip.getX()-1, warShip.getY()-1, 
-                warShip.getWidth()+2, warShip.getHeight()+2);     
-    }    
+
+        repaint(warShip.getX() - 10, warShip.getY() - 10,
+                warShip.getWidth() + 2, warShip.getHeight() + 2);
+    }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-                this.setBackground(MyColor.black);
+        if (warShip.getX() < 0 ) {
+            warShip.x = 0;
+        }
+        if (warShip.getX() > 633) {
+            warShip.x = 633;
+        }
+        if (warShip.getY() > 393) {
+            warShip.y = 393;
+        }
+        
+        if (warShip.getY() < 0) {
+            warShip.y = 0;
+        }
+        
+        this.setBackground(MyColor.GAMELAYOUTBACKGROUND);
         step();
     }
 
     private class TAdapter extends KeyAdapter {
+
         @Override
         public void keyReleased(KeyEvent e) {
             warShip.keyReleased(e);
-            
-            
+
         }
 
         @Override
         public void keyPressed(KeyEvent e) {
             warShip.keyPressed(e);
-            
-            
-            
+
         }
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
 }

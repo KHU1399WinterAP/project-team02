@@ -19,28 +19,28 @@ import javax.swing.ImageIcon;
  * @author Amir reza
  */
 public class MyIcon {
-    private static Icon imageicon;
-    private static BufferedImage img;
-    
-    
-    
-    public static Icon myicon(String iconname , Component component){
-    try {
-        img = ImageIO.read(new File(Links.baseicon + iconname));
-        } 
-    catch (IOException e) {
+
+    private static Icon ultimateImageIcon;
+    private static BufferedImage iconImage;
+
+    public static Icon myIcon(String iconName, Component component ,int choose) {
+        if (choose == 0) {
+            try {
+            iconImage = ImageIO.read(new File(Links.BASEICON + iconName));
+        } catch (IOException e) {
         }
-    
-    
-    Image dimg = img.getScaledInstance(component.getWidth(), component.getHeight(),Image.SCALE_SMOOTH);
-       imageicon = new ImageIcon(dimg);
-       
-       return imageicon;
-       
+        }else{
+        try {
+            iconImage = ImageIO.read(new File(Links.BASECHARACTERICON + iconName));
+        } catch (IOException e) {
+        }
+        }
+
+        Image scaledImageIcon = iconImage.getScaledInstance(component.getWidth(), component.getHeight(), Image.SCALE_SMOOTH);
+        ultimateImageIcon = new ImageIcon(scaledImageIcon);
+
+        return ultimateImageIcon;
+
     }
-    
-    
-    
-    
-    
+
 }

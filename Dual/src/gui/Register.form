@@ -25,7 +25,7 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="iconpanel" min="-2" pref="372" max="-2" attributes="0"/>
+              <Component id="iconPanel" min="-2" pref="372" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jPanel2" max="32767" attributes="0"/>
           </Group>
@@ -34,12 +34,12 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Component id="jPanel2" alignment="0" max="32767" attributes="0"/>
-          <Component id="iconpanel" alignment="0" max="32767" attributes="0"/>
+          <Component id="iconPanel" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="iconpanel">
+    <Container class="javax.swing.JPanel" name="iconPanel">
       <Properties>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[400, 600]"/>
@@ -49,17 +49,17 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="iconlable" alignment="0" pref="372" max="32767" attributes="0"/>
+              <Component id="iconLable" alignment="0" pref="372" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="iconlable" alignment="0" max="32767" attributes="0"/>
+              <Component id="iconLable" alignment="0" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="iconlable">
+        <Component class="javax.swing.JLabel" name="iconLable">
           <Properties>
             <Property name="text" type="java.lang.String" value="jLabel1"/>
           </Properties>
@@ -76,21 +76,21 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="usernamelable" alignment="1" min="-2" pref="155" max="-2" attributes="0"/>
+                      <Component id="userNameLable" alignment="1" min="-2" pref="155" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="usernamefeild" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="passwordfeild" alignment="0" pref="155" max="32767" attributes="0"/>
-                                  <Component id="passwordlable" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="userNameFeild" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="passwordFeild" alignment="0" pref="155" max="32767" attributes="0"/>
+                                  <Component id="passwordLable" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="150" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="registerbutton" pref="106" max="32767" attributes="0"/>
-                                  <Component id="backtomainbutton" max="32767" attributes="0"/>
+                                  <Component id="registerButton" pref="106" max="32767" attributes="0"/>
+                                  <Component id="BackToMainButton" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -103,57 +103,60 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
-                  <Component id="usernamelable" min="-2" max="-2" attributes="0"/>
+                  <Component id="userNameLable" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="usernamefeild" min="-2" max="-2" attributes="0"/>
+                  <Component id="userNameFeild" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                  <Component id="passwordlable" min="-2" max="-2" attributes="0"/>
+                  <Component id="passwordLable" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="passwordfeild" min="-2" max="-2" attributes="0"/>
+                  <Component id="passwordFeild" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
-                  <Component id="registerbutton" min="-2" max="-2" attributes="0"/>
+                  <Component id="registerButton" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="backtomainbutton" min="-2" max="-2" attributes="0"/>
+                  <Component id="BackToMainButton" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="201" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="usernamelable">
+        <Component class="javax.swing.JLabel" name="userNameLable">
           <Properties>
             <Property name="text" type="java.lang.String" value="username"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="passwordlable">
+        <Component class="javax.swing.JLabel" name="passwordLable">
           <Properties>
             <Property name="text" type="java.lang.String" value="password"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JPasswordField" name="passwordfeild">
+        <Component class="javax.swing.JPasswordField" name="passwordFeild">
           <Properties>
             <Property name="text" type="java.lang.String" value="jPasswordField1"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="passwordFeildActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="usernamefeild">
+        <Component class="javax.swing.JTextField" name="userNameFeild">
           <Properties>
             <Property name="text" type="java.lang.String" value="jTextField1"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="registerbutton">
+        <Component class="javax.swing.JButton" name="registerButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="Register"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="registerbuttonActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="registerButtonActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="backtomainbutton">
+        <Component class="javax.swing.JButton" name="BackToMainButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="Login"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backtomainbuttonActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BackToMainButtonActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

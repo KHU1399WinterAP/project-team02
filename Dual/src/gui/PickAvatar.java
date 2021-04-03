@@ -12,7 +12,9 @@ import app.MyIcon;
 import app.User;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
+import utils.Utility;
 
 /**
  *
@@ -23,164 +25,124 @@ public class PickAvatar extends javax.swing.JFrame {
     /**
      * Creates new form PickAvatar
      */
-    
-        private JLabel avatarlable;
-        private User active_user = Database.get_user( (Login.username == null) ? Register.username : Login.username);
+    private JLabel avatarLable;
+    private User activeUser = Database.getUser((Login.userName == null) ? Register.userName : Login.userName);
 
-    public PickAvatar(int x , int y, JLabel avatarlable) {
+    public PickAvatar(int x, int y, JLabel avatarLable) {
         initComponents();
-        
-        set_location(x , y);
+
+        setFrameLocation1(x, y);
         them();
-        this.avatarlable = avatarlable;
-        choose();
+        this.avatarLable = avatarLable;
+        choose(this);
 
     }
 
     public PickAvatar() {
     }
-    
-    
-    
-    
-    
-       public void set_location(int x, int y){
-    
-    this.setLocationRelativeTo(null);
-    this.setLocation(x + 70, y);
-    
-    
-    
-    
+
+    public void setFrameLocation1(int x, int y) {
+
+        this.setLocationRelativeTo(null);
+        this.setLocation(x + 70, y);
+
     }
 
-       private void them(){
-        if (active_user.getSettingid() == 0) {
-            set_backround();
+    private void them() {
+        if (activeUser.getSettingId() == 0) {
+            Utility.setThemForPanel(MyColor.MYGREEN, jPanel1);
+        } else {
+            Utility.setThemForPanel(MyColor.DARKFONT, jPanel1);
+
         }
-    
-        else{
-        set_dark_backround();
-        
-        
-        }
-    
-        set_icon();
-       }
-        private void set_backround(){
-        jPanel1.setBackground(MyColor.red);
-        
-        
+
+        setLablesIcon();
     }
-    
-    private void set_dark_backround(){
-        jPanel1.setBackground(MyColor.darkbackground);
-        
-        
+
+    private void setLablesIcon() {
+        String[] iconNames = {Links.AVATAR1, Links.AVATAR2, Links.AVATAR3, Links.AVATAR4, Links.AVATAR5, Links.AVATAR6};
+        Utility.setMyIcon(iconNames,0, avatar1, avatar2, avatar3, avatar4, avatar5, avatar6);
+
     }
-       private void set_icon(){
-        avatar1.setIcon(MyIcon.myicon(Links.avatar1, avatar1));
-        avatar2.setIcon(MyIcon.myicon(Links.avatar2, avatar2));
-        avatar3.setIcon(MyIcon.myicon(Links.avatar3,avatar3));
-        avatar4.setIcon(MyIcon.myicon(Links.avatar4,avatar4));
-        avatar5.setIcon(MyIcon.myicon(Links.avatar5,avatar5));
-        avatar6.setIcon(MyIcon.myicon(Links.avatar6,avatar6));
-        
-       
-    }
-        private void choose(){
+
+    private void choose(JFrame frame) {
         avatar1.addMouseListener(new MouseAdapter() {
-                @Override
-                public void mouseClicked(MouseEvent e) {
+            @Override
+            public void mouseClicked(MouseEvent e) {
 
-                    active_user.avatarid = 1;
-                    Database.update_user(active_user);
-                    avatarlable.setIcon(MyIcon.myicon(Links.avatar1, avatarlable));
-                    
-                }
+                activeUser.avatarId = 1;
+                Database.updateUser(activeUser);
+                avatarLable.setIcon(MyIcon.myIcon(Links.AVATAR1, avatarLable, 0));
+                frame.dispose();
 
-            });
-        
-        
+            }
+
+        });
+
         avatar2.addMouseListener(new MouseAdapter() {
-                @Override
-                public void mouseClicked(MouseEvent e) {
+            @Override
+            public void mouseClicked(MouseEvent e) {
 
-                    active_user.avatarid = 2;
-                    Database.update_user(active_user);
-                    avatarlable.setIcon(MyIcon.myicon(Links.avatar2, avatarlable));
-                    
-                    
-                }
+                activeUser.avatarId = 2;
+                Database.updateUser(activeUser);
+                avatarLable.setIcon(MyIcon.myIcon(Links.AVATAR2, avatarLable, 0));
+                frame.dispose();
 
-            });
-        
+            }
+
+        });
+
         avatar3.addMouseListener(new MouseAdapter() {
-                @Override
-                public void mouseClicked(MouseEvent e) {
+            @Override
+            public void mouseClicked(MouseEvent e) {
 
-                    active_user.avatarid = 3;
-                    Database.update_user(active_user);
-                    avatarlable.setIcon(MyIcon.myicon(Links.avatar3, avatarlable));
-                    
-                    
-                }
+                activeUser.avatarId = 3;
+                Database.updateUser(activeUser);
+                avatarLable.setIcon(MyIcon.myIcon(Links.AVATAR3, avatarLable, 0));
+                frame.dispose();
 
-            });
+            }
+
+        });
         avatar4.addMouseListener(new MouseAdapter() {
-                @Override
-                public void mouseClicked(MouseEvent e) {
+            @Override
+            public void mouseClicked(MouseEvent e) {
 
-                    active_user.avatarid = 4;
-                    Database.update_user(active_user);
-                    avatarlable.setIcon(MyIcon.myicon(Links.avatar4, avatarlable));
-                    
-                    
-                }
+                activeUser.avatarId = 4;
+                Database.updateUser(activeUser);
+                avatarLable.setIcon(MyIcon.myIcon(Links.AVATAR4, avatarLable, 0));
+                frame.dispose();
 
-            });
-        
+            }
+
+        });
+
         avatar5.addMouseListener(new MouseAdapter() {
-                @Override
-                public void mouseClicked(MouseEvent e) {
+            @Override
+            public void mouseClicked(MouseEvent e) {
 
-                    active_user.avatarid = 5;
-                    Database.update_user(active_user);
-                    avatarlable.setIcon(MyIcon.myicon(Links.avatar5, avatarlable));
-                    
-                    
-                }
+                activeUser.avatarId = 5;
+                Database.updateUser(activeUser);
+                avatarLable.setIcon(MyIcon.myIcon(Links.AVATAR5, avatarLable, 0));
+                frame.dispose();
+            }
 
-            });
-        
-        
-        
+        });
+
         avatar6.addMouseListener(new MouseAdapter() {
-                @Override
-                public void mouseClicked(MouseEvent e) {
+            @Override
+            public void mouseClicked(MouseEvent e) {
 
-                    active_user.avatarid = 6;
-                    Database.update_user(active_user);
-                    avatarlable.setIcon(MyIcon.myicon(Links.avatar6, avatarlable));
-                    
-                    
-                }
+                activeUser.avatarId = 6;
+                Database.updateUser(activeUser);
+                avatarLable.setIcon(MyIcon.myIcon(Links.AVATAR6, avatarLable, 0));
+                frame.dispose();
+            }
 
-            });
-        
-        
-        
-        
-        
-        
-        
-        
-        }
+        });
 
-   
-       
-       
-       
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -292,10 +254,8 @@ public class PickAvatar extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new PickAvatar().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new PickAvatar().setVisible(true);
         });
     }
 

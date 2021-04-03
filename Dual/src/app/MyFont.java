@@ -10,32 +10,24 @@ import java.awt.Font;
 import java.awt.FontFormatException;
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 
 /**
  *
  * @author Amir reza
  */
-public class MyFont extends Font{
+public class MyFont extends Font {
 
     public MyFont(Font font) {
         super(font);
     }
-    
-    public static void set_myfont(String fontname, int style, int size, Component component) throws FontFormatException, IOException{
-        Font font = Font.createFont(Font.TRUETYPE_FONT, new File(Links.basefont + fontname));
-        font = font.deriveFont(style, size);
-        component.setFont(font);
-     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+    public static void setMyFont(String fontName, int style, int size, Component... components) throws FontFormatException, IOException {
+        for (Component component : components) {
+            Font font = Font.createFont(Font.TRUETYPE_FONT, new File(Links.BASEFONT + fontName));
+            font = font.deriveFont(style, size);
+            component.setFont(font);
+        }
+
+    }
+
 }

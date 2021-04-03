@@ -28,21 +28,21 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="mainiconpanel" min="-2" pref="401" max="-2" attributes="0"/>
+              <Component id="mainIconPanel" min="-2" pref="401" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="mainoptionpanel" min="-2" pref="401" max="-2" attributes="0"/>
+              <Component id="mainOptionPanel" min="-2" pref="401" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="mainiconpanel" alignment="0" max="32767" attributes="0"/>
-          <Component id="mainoptionpanel" alignment="1" max="32767" attributes="0"/>
+          <Component id="mainIconPanel" alignment="0" max="32767" attributes="0"/>
+          <Component id="mainOptionPanel" alignment="1" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="mainiconpanel">
+    <Container class="javax.swing.JPanel" name="mainIconPanel">
       <Properties>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[400, 600]"/>
@@ -52,17 +52,17 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="mainiconlable" alignment="0" pref="401" max="32767" attributes="0"/>
+              <Component id="mainIconLable" alignment="0" pref="401" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="mainiconlable" pref="600" max="32767" attributes="0"/>
+              <Component id="mainIconLable" pref="600" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="mainiconlable">
+        <Component class="javax.swing.JLabel" name="mainIconLable">
           <Properties>
             <Property name="text" type="java.lang.String" value="jLabel1"/>
           </Properties>
@@ -72,7 +72,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JPanel" name="mainoptionpanel">
+    <Container class="javax.swing.JPanel" name="mainOptionPanel">
       <Properties>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[400, 600]"/>
@@ -87,13 +87,13 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="loginbutton" min="-2" pref="200" max="-2" attributes="0"/>
-                              <Component id="registerbutton" min="-2" pref="200" max="-2" attributes="0"/>
+                              <Component id="loginButton" min="-2" pref="200" max="-2" attributes="0"/>
+                              <Component id="registerButton" min="-2" pref="200" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="145" max="-2" attributes="0"/>
-                          <Component id="exitbutton" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="exitButton" min="-2" pref="100" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace pref="116" max="32767" attributes="0"/>
@@ -104,39 +104,39 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
-                  <Component id="loginbutton" min="-2" pref="56" max="-2" attributes="0"/>
+                  <Component id="loginButton" min="-2" pref="56" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                  <Component id="registerbutton" min="-2" pref="56" max="-2" attributes="0"/>
+                  <Component id="registerButton" min="-2" pref="56" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="exitbutton" min="-2" pref="56" max="-2" attributes="0"/>
+                  <Component id="exitButton" min="-2" pref="56" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="150" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="registerbutton">
+        <Component class="javax.swing.JButton" name="registerButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="Register"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="registerbuttonActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="registerButtonActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="loginbutton">
+        <Component class="javax.swing.JButton" name="loginButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="Login"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="loginbuttonActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="loginButtonActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="exitbutton">
+        <Component class="javax.swing.JButton" name="exitButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="Register"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="exitbuttonActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="exitButtonActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

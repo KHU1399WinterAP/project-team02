@@ -11,22 +11,22 @@ import java.awt.Color;
  *
  * @author Amir reza
  */
-public class MyColor extends Color{
+public class MyColor extends Color {
 
-    public MyColor(int r, int g, int b) {
-        super(r, g, b);
+    public MyColor(int red, int green, int blue) {
+        super(red, green, blue);
     }
 
-    private static Color mycolor (int r, int g, int b){
-    
-        return new Color(r, g, b);
-    
-    
+    private static Color mycolor(int red, int green, int blue) {
+
+        return new Color(red, green, blue);
+
     }
-    public static final Color red = mycolor(227,38,92);
-    public static final Color green = mycolor(12, 174, 75);
-    public static final Color gray = mycolor(214, 217, 223);
-    public static final Color darkfont = mycolor(49, 78, 82);
-    public static final Color darkbackground = mycolor(30, 33, 45);
-    public static final Color darkbuttoncolor = mycolor(65, 60, 105);
+    public static final Color MYRED = mycolor(227, 38, 92);
+    public static final Color MYGREEN = mycolor(12, 174, 75);
+    public static final Color MYGRAY = mycolor(214, 217, 223);
+    public static final Color DARKFONT = mycolor(49, 78, 82);
+    public static final Color DARKBACKGROUND = mycolor(30, 33, 45);
+    public static final Color DARKBUTTONCOLOR = mycolor(65, 60, 105);
+    public static final Color GAMELAYOUTBACKGROUND = mycolor(61, 66, 122);
 }
