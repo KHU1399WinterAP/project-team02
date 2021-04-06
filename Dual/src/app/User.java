@@ -10,7 +10,7 @@ public class User {
     public String userName;
     public String password;
     public int settingId;
-    public int toatlLosts;
+    public int totalLosts;
     public int totalWins;
     public int avatarId;
     public int characterId;
@@ -18,7 +18,7 @@ public class User {
         this.userName = username;
         this.password = String.valueOf(password);
         this.settingId = settingId;
-        this.toatlLosts = totalLosts;
+        this.totalLosts = totalLosts;
         this.totalWins = totalWins;
         this.avatarId = avatarId;
         this.characterId = characterId;
@@ -28,8 +28,8 @@ public class User {
         return avatarId;
     }
 
-    public int getToatlLosts() {
-        return toatlLosts;
+    public int getTotalLosts() {
+        return totalLosts;
     }
 
     public int getTotalWins() {
@@ -55,7 +55,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" + "userName=" + userName + ", password=" + password + ", settingId=" + settingId + ", toatlLosts=" + toatlLosts + ", totalWins=" + totalWins + ", avatarId=" + avatarId + ", characterId=" + characterId + '}';
+        return "User{" + "userName=" + userName + ", password=" + password + ", settingId=" + settingId + ", toatlLosts=" + totalLosts + ", totalWins=" + totalWins + ", avatarId=" + avatarId + ", characterId=" + characterId + '}';
     }
 
    

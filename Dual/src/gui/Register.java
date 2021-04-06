@@ -130,7 +130,8 @@ public class Register extends javax.swing.JFrame {
         registerButton = new javax.swing.JButton();
         BackToMainButton = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        setAlwaysOnTop(true);
         setResizable(false);
 
         iconPanel.setPreferredSize(new java.awt.Dimension(400, 600));

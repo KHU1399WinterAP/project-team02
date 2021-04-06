@@ -35,6 +35,10 @@ public class PickAvatar extends javax.swing.JFrame {
         them();
         this.avatarLable = avatarLable;
         choose(this);
+        
+        this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        this.setResizable(false);
+        this.setAlwaysOnTop(true);
 
     }
 

@@ -21,7 +21,7 @@ public class WarShip {
     public int dx;
     public int dy;
     public int x = 40;
-    public int y = 60;
+    public int y = 260;
     private int w;
     private int h;
     private Image image;
@@ -104,19 +104,19 @@ public class WarShip {
         int key = e.getKeyCode();
 
         if (key == KeyEvent.VK_LEFT) {
-            dx = -2;
+            dx = -4;
         }
 
         if (key == KeyEvent.VK_RIGHT) {
-            dx = 2;
+            dx = 4;
         }
 
         if (key == KeyEvent.VK_UP) {
-            dy = -2;
+            dy = -4;
         }
 
         if (key == KeyEvent.VK_DOWN) {
-            dy = 2;
+            dy = 4;
         }
     }
 
@@ -141,4 +141,5 @@ public class WarShip {
         }
     }
 
+   
 }

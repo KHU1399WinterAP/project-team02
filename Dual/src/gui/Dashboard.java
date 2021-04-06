@@ -21,7 +21,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import utils.Utility;
-
 /**
  *
  * @author Amir reza
@@ -187,7 +186,7 @@ public class Dashboard extends javax.swing.JFrame {
         totalLostsLable.setText("<html>Total<br />Losts</html>");
         totalwWinsLable.setText("<html>Total<br />Wins</html>");
         totalWinsNumber.setText(String.valueOf(activeUser.getTotalWins()));
-        totalLostsNumber.setText(String.valueOf(activeUser.getToatlLosts()));
+        totalLostsNumber.setText(String.valueOf(activeUser.getTotalLosts()));
 
     }
 
@@ -221,6 +220,7 @@ public class Dashboard extends javax.swing.JFrame {
         });
 
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -247,6 +247,7 @@ public class Dashboard extends javax.swing.JFrame {
         totalLostsNumber = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setAlwaysOnTop(true);
         setResizable(false);
 
         jPanel1.setPreferredSize(new java.awt.Dimension(810, 600));
@@ -389,8 +390,10 @@ public class Dashboard extends javax.swing.JFrame {
 
     private void singlePlayerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_singlePlayerButtonActionPerformed
 
-        SinglePlayerFrame gamePlayFrame = new SinglePlayerFrame();
+                
+        SinglePlayerFrame gamePlayFrame ;
         this.dispose();
+        gamePlayFrame = new SinglePlayerFrame();
         gamePlayFrame.setVisible(true);
 
 

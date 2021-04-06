@@ -106,7 +106,9 @@ public class Login extends javax.swing.JFrame {
         iconpanel = new javax.swing.JPanel();
         iconLable = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        setAlwaysOnTop(true);
+        setResizable(false);
 
         usernameLable.setText("username");
 

@@ -8,7 +8,6 @@ package gui;
 import app.Database;
 import app.Links;
 import app.MyColor;
-import app.MyIcon;
 import app.User;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -31,6 +30,9 @@ public class PickCharacter extends javax.swing.JFrame {
         them();
         choose(this);
         setFrameLocation(x, y);
+        this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        this.setResizable(false);
+        this.setAlwaysOnTop(true);
     }
 
     /**
@@ -118,7 +120,7 @@ public class PickCharacter extends javax.swing.JFrame {
     public void setFrameLocation(int x, int y) {
 
         this.setLocationRelativeTo(null);
-        this.setLocation(x + 170, y + 500);
+        this.setLocation(x + 170, y + 400);
 
     }
 

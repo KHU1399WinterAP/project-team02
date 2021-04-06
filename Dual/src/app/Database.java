@@ -63,7 +63,7 @@ public class Database {
         try {
             statement = connection.createStatement();
             String query = "INSERT INTO users (username,password,settingid,totalwins,totallosts,avatarid,characterid) VALUES('" + user.userName + "' , '"
-                    + user.password + "', '" + user.settingId + "', '" + user.totalWins + "', '" + user.toatlLosts + "', '" + user.avatarId + "', '" + user.characterId + "')";
+                    + user.password + "', '" + user.settingId + "', '" + user.totalWins + "', '" + user.totalLosts + "', '" + user.avatarId + "', '" + user.characterId + "')";
             statement.executeUpdate(query);
 
         } catch (SQLException ex) {
@@ -118,7 +118,7 @@ public class Database {
             statement = connection.createStatement();
             String query = "UPDATE users SET password = '" + user.password
                     + "', settingid = '" + user.settingId + "' ,totalwins = '" + user.totalWins + "',totallosts = '"
-                    + user.toatlLosts + "',avatarid = '" + user.avatarId + "',characterid = '" + user.characterId + "' WHERE username = '" + user.userName + "' ";
+                    + user.totalLosts + "',avatarid = '" + user.avatarId + "',characterid = '" + user.characterId + "' WHERE username = '" + user.userName + "' ";
             statement.executeUpdate(query);
 
         } catch (SQLException ex) {

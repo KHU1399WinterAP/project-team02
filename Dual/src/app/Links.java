@@ -9,7 +9,6 @@ package app;
  *
  * @author Amir reza
  */
-//D:\\Desktop\\AP_Project\\Git & Github\\Project_02\\Dual\\
 public class Links {
 
     public static final String BASEFONT = "src/resources/fonts/";
