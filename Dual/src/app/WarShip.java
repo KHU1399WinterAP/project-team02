@@ -20,8 +20,8 @@ public class WarShip {
     
     public int dx;
     public int dy;
-    public int x = 40;
-    public int y = 260;
+    public int x = 170;
+    public int y = 290;
     private int w;
     private int h;
     private Image image;

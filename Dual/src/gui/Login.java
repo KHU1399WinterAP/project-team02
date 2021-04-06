@@ -207,7 +207,9 @@ public class Login extends javax.swing.JFrame {
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
 
         userName = userNameFeild.getText();
-        int check = Database.count_user(userName);
+        
+        int check = Database.countUser(userName);
+        String password = String.valueOf(passwordFeild.getPassword());
 
         switch (check) {
 
@@ -216,14 +218,26 @@ public class Login extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(rootPane, "There is no account with this username!");
                 userNameFeild.setText("");
                 passwordFeild.setText("");
+                
+                
+                
                 break;
 
             }
 
             case 1 -> {
+                int checkPassword = Database.checkPassword(userName, password);
+
+                if (checkPassword == 0) {
+                    JOptionPane.showMessageDialog(rootPane, "The password is wrong!");
+                userNameFeild.setText("");
+                passwordFeild.setText("");
+                } else {
                 Dashboard dashboard = new Dashboard();
                 this.dispose();
                 dashboard.setVisible(true);
+                }
+                
                 break;
             }
         }

@@ -34,13 +34,35 @@ public class Database {
         }
     }
 
-    public static int count_user(String username) {
+    public static int countUser(String username) {
 
         try {
             int user = -1;
             ArrayList<Integer> users = new ArrayList<>();
             Statement statement = connection.createStatement();
             String query = "SELECT COUNT(username) FROM users WHERE username = '" + username + "' ";
+            ResultSet resultSet = statement.executeQuery(query);
+            while (resultSet.next()) {
+                user = resultSet.getInt("COUNT(username)");
+                users.add(user);
+
+            }
+
+            return users.get(0);
+
+        } catch (SQLException ex) {
+            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+            return -1;
+        }
+
+    }
+    public static int checkPassword(String username, String password) {
+
+        try {
+            int user = -1;
+            ArrayList<Integer> users = new ArrayList<>();
+            Statement statement = connection.createStatement();
+            String query = "SELECT COUNT(username) FROM users WHERE username = '" + username + "' And password = '" + password + "' ";
             ResultSet resultSet = statement.executeQuery(query);
             while (resultSet.next()) {
                 user = resultSet.getInt("COUNT(username)");

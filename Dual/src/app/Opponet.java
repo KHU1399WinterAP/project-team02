@@ -70,13 +70,13 @@ public class Opponet {
         if (random.nextInt(2) == 0) {
             dy = random.nextInt(6) + 20;
         } else {
-            dy = -1 * (random.nextInt(6) + 20);
+            dy = -1 * (random.nextInt(6) + 24);
         }
 
         if (random.nextInt(2) == 0) {
             dx = random.nextInt(6) + 20;
         } else {
-            dx = -1 * (random.nextInt(6) + 20);
+            dx = -1 * (random.nextInt(6) + 24);
         }
 
         if ((getX() <= 11 && dx < 0 )|| (getX() >= 630 && dx >0)) {

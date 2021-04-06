@@ -25,6 +25,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
@@ -47,7 +49,7 @@ public class Board1 extends JPanel implements ActionListener, KeyListener {
     long second;
     private Timer timer;
     private WarShip warShip;
-    private final int DELAY = 20;
+    private final int DELAY = 5;
     Random random;
     private boolean close = false;
 

@@ -236,7 +236,7 @@ public class Register extends javax.swing.JFrame {
     private void registerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerButtonActionPerformed
 
         userName = userNameFeild.getText();
-        int check = Database.count_user(userName);
+        int check = Database.countUser(userName);
 
         switch (check) {
 
