@@ -19,7 +19,7 @@ import java.util.logging.Logger;
  *
  * @author Amir reza
  */
-public class Database {
+public class  Database {
 
     private static Connection connection = null;
 
@@ -123,7 +123,6 @@ public class Database {
 
             User user = new User(userNameTemp, passwordTemp, settingIdTemp, totalWinsTemp, totalLosts, avatarIdTemp, characterIdTemp);
 
-            System.err.println(user);
             return user;
 
         } catch (SQLException ex) {

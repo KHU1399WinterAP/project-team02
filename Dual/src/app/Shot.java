@@ -5,10 +5,8 @@
  */
 package app;
 
-import gui.Board1;
-import java.awt.Graphics;
-import java.awt.image.BufferedImage;
-import java.awt.Rectangle;
+
+import java.awt.*;
 
 /**
  *
@@ -19,15 +17,15 @@ public class Shot {
     public int x;
     public int y;
     private int dy;
-    private BufferedImage image;
+    private Image image;
     private int directChoose;
-    public Shot(int x, int y, BufferedImage image, Board1 game, int directChoose) {
+    public Shot(int x, int y, Image image, int directChoose) {
         this.x = x;
         this.y = y;
         this.image = image;
         this.directChoose = directChoose;
         if (this.directChoose == 0) {
-                    this.dy = -5;
+                    this.dy = -8;
 
             
         }
@@ -56,7 +54,7 @@ public class Shot {
         return dy;
     }
 
-    public BufferedImage getImage() {
+    public Image getImage() {
         return image;
     }
 
@@ -66,14 +64,10 @@ public class Shot {
     this.y += dy;
     
     }
-    public void draw(Graphics g) {
-		g.drawImage(image, x, y, null);
-	}
+
     public boolean checkCollision(app.Opponet other) {
 		Rectangle myRect = new Rectangle();
-		Rectangle otherRect = new Rectangle();  
-                System.err.println("shot : " + getX()+" "+getY());
-                System.err.println("opponent : " + other.getX()+" "+other.getY());
+		Rectangle otherRect = new Rectangle();
 		myRect.setBounds(x, y, getWidth(), getHeight());
 		otherRect.setBounds(other.getX(), other.getY(),
 				other.getWidth(), other.getHeight());
@@ -82,9 +76,7 @@ public class Shot {
 	}
     public boolean checkCollision(app.WarShip other) {
 		Rectangle myRect = new Rectangle();
-		Rectangle otherRect = new Rectangle();  
-                System.err.println("shot : " + getX()+" "+getY());
-                System.err.println("ship : " + other.getX()+" "+other.getY());
+		Rectangle otherRect = new Rectangle();
 		myRect.setBounds(x, y, getWidth(), getHeight());
 		otherRect.setBounds(other.getX(), other.getY(),
 				other.getWidth(), other.getHeight());

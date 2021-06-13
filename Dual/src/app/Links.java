@@ -11,8 +11,8 @@ package app;
  */
 public class Links {
 
-    public static final String BASEFONT = "src/resources/fonts/";
-    public static final String MAINFONT = "DEADLY FINISHER.ttf";
+    public static final String BASEFONT = "/resources/fonts/";
+    public static final String MAINFONT = "DEADLYFINISHER.ttf";
 
     public static final String DASHBOARDICON = "dashboardicon.png";
     public static final String DARKDASHBOARDICON = "darkdashboardicon.png";
@@ -32,8 +32,7 @@ public class Links {
     public static final String CHARACTER6 = "character6.png";
 
     public static final String DATABASEURL = "jdbc:mysql://localhost:3306/dual";
-
-    public static final String BASEICON = "src/resources/icons/";
-    public static final String BASECHARACTERICON = "src/resources/icons/characters/";
+    public static final String BASEICON = "/resources/icons/";
+    public static final String BASECHARACTERICON = "/resources/icons/characters/";
     public static final String MAINREGISTERLOGINICON = "main.png";
 }

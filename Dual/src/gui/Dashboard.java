@@ -19,7 +19,8 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JOptionPane;
+import javax.swing.*;
+
 import utils.Utility;
 /**
  *
@@ -59,6 +60,10 @@ public class Dashboard extends javax.swing.JFrame {
 
     public void setIcon() {
         iconLable.setIcon(MyIcon.myIcon(Links.DASHBOARDICON, iconLable, 0));
+        setSpaceShipCharacter(activeUser, avatarLable);
+    }
+
+    private static void setSpaceShipCharacter(User activeUser, JLabel avatarLable) {
         switch (activeUser.getAvatarId()) {
 
             case 1 ->
@@ -79,22 +84,7 @@ public class Dashboard extends javax.swing.JFrame {
 
     private void setDarkIcon() {
         iconLable.setIcon(MyIcon.myIcon(Links.DARKDASHBOARDICON, iconLable, 0));
-        switch (activeUser.getAvatarId()) {
-
-            case 1 ->
-                avatarLable.setIcon(MyIcon.myIcon(Links.AVATAR1, avatarLable, 0));
-
-            case 2 ->
-                avatarLable.setIcon(MyIcon.myIcon(Links.AVATAR2, avatarLable, 0));
-            case 3 ->
-                avatarLable.setIcon(MyIcon.myIcon(Links.AVATAR3, avatarLable, 0));
-            case 4 ->
-                avatarLable.setIcon(MyIcon.myIcon(Links.AVATAR4, avatarLable, 0));
-            case 5 ->
-                avatarLable.setIcon(MyIcon.myIcon(Links.AVATAR5, avatarLable, 0));
-            case 6 ->
-                avatarLable.setIcon(MyIcon.myIcon(Links.AVATAR6, avatarLable, 0));
-        }
+        setSpaceShipCharacter(activeUser, avatarLable);
     }
 
     private void setForeground() {
@@ -114,7 +104,6 @@ public class Dashboard extends javax.swing.JFrame {
     }
 
     private void setDarkForeground() {
-        //new Color(12, 174, 75)
         multiPlayerButton.setForeground(MyColor.DARKFONT);
         singlePlayerButton.setForeground(MyColor.DARKFONT);
         userNameLable.setForeground(MyColor.DARKFONT);
@@ -202,8 +191,6 @@ public class Dashboard extends javax.swing.JFrame {
         appNameLable.setFont(new Font(MyFont.MONOSPACED, Font.BOLD, 35));
         totalWinsNumber.setFont(new Font(MyFont.MONOSPACED, Font.BOLD, 35));
         totalLostsNumber.setFont(new Font(MyFont.MONOSPACED, Font.BOLD, 35));
-        //appnamelable.setFont(MyFont.BOLD);
-        //appnamelable.setSize(40);
     }
 
     private void click() {
@@ -255,34 +242,23 @@ public class Dashboard extends javax.swing.JFrame {
         iconLable.setText("jLabel1");
 
         changeCharacter.setText("jButton5");
-        changeCharacter.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                changeCharacterActionPerformed(evt);
-            }
-        });
+        changeCharacter.addActionListener(evt -> changeCharacterActionPerformed(evt));
 
         multiPlayerButton.setText("jButton4");
 
         singlePlayerButton.setText("jButton3");
-        singlePlayerButton.addActionListener(new java.awt.event.ActionListener() {
+        singlePlayerButton.addActionListener(evt -> singlePlayerButtonActionPerformed(evt));
+        multiPlayerButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                singlePlayerButtonActionPerformed(evt);
+                multiPlayerButtonActionPerformed(evt);
             }
         });
 
         logOutButton.setText("jButton2");
-        logOutButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                logOutButtonActionPerformed(evt);
-            }
-        });
+        logOutButton.addActionListener(evt -> logOutButtonActionPerformed(evt));
 
         themButton.setText("jButton1");
-        themButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                themButtonActionPerformed(evt);
-            }
-        });
+        themButton.addActionListener(evt -> themButtonActionPerformed(evt));
 
         userNameLable.setText("jLabel1");
 
@@ -391,13 +367,24 @@ public class Dashboard extends javax.swing.JFrame {
     private void singlePlayerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_singlePlayerButtonActionPerformed
 
                 
-        SinglePlayerFrame gamePlayFrame ;
+        gui.SinglePlayerFrame gamePlayFrame ;
         this.dispose();
-        gamePlayFrame = new SinglePlayerFrame();
+        gamePlayFrame = new gui.SinglePlayerFrame();
         gamePlayFrame.setVisible(true);
 
 
     }//GEN-LAST:event_singlePlayerButtonActionPerformed
+
+    private void multiPlayerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_singlePlayerButtonActionPerformed
+
+
+        MultiplayerLogin multiplayerLogin ;
+        this.dispose();
+        multiplayerLogin = new MultiplayerLogin();
+        multiplayerLogin.setVisible(true);
+
+
+    }
 
     private void themButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themButtonActionPerformed
 
@@ -428,6 +415,8 @@ public class Dashboard extends javax.swing.JFrame {
             } catch (FontFormatException | IOException | SQLException | ClassNotFoundException ex) {
                 Logger.getLogger(Dashboard.class.getName()).log(Level.SEVERE, null, ex);
             }
+            this.activeUser = null;
+            Login.userName = null;
             this.dispose();
             menu.setVisible(true);
 

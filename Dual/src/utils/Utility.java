@@ -5,10 +5,11 @@
  */
 package utils;
 
-import app.MyIcon;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Toolkit;
+import app.*;
+import gui.Dashboard;
+
+import java.awt.*;
+import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -84,6 +85,72 @@ public class Utility {
             label.setIcon(MyIcon.myIcon(iconsName[j], label, i));
             j++;
         }
+
+    }
+    public static void keepInTheSpaceShip(WarShip warShip, JPanel panel){
+        if (warShip.getX() < 0) {
+            warShip.x = 0;
+        }
+        if (warShip.getX() > panel.getWidth() - warShip.getWidth()) {
+            warShip.x = panel.getWidth() - warShip.getWidth();
+        }
+        if (warShip.getY() > panel.getHeight() - warShip.getHeight()) {
+            warShip.y = panel.getHeight() - warShip.getHeight();
+        }
+
+        if (warShip.getY() < 0) {
+            warShip.y = 0;
+        }
+
+    }
+
+    public static void moveObjects(WarShip spaceShip, ArrayList<Shot> shots, ArrayList<Shot> enemyShots){
+        spaceShip.move();
+        for (int i = 0; i < shots.size(); i++) {
+            shots.get(i).move();
+
+        }
+        for (int i = 0; i < enemyShots.size(); i++) {
+            enemyShots.get(i).move();
+
+        }
+    }public static void moveObjects(Opponet spaceShip, ArrayList<Shot> shots, ArrayList<Shot> enemyShots){
+        spaceShip.move();
+        for (int i = 0; i < shots.size(); i++) {
+            shots.get(i).move();
+
+        }
+        for (int i = 0; i < enemyShots.size(); i++) {
+            enemyShots.get(i).move();
+
+        }
+    }
+
+    public static void drawShots(JPanel jPanel,Graphics g, ArrayList<Shot> shots, ArrayList<Shot> enemyShots){
+        for (int i = 0; i < shots.size(); i++) {
+            Shot sprite = (Shot) shots.get(i);
+            Graphics2D g2d = (Graphics2D) g;
+            g2d.drawImage(sprite.getImage(), sprite.getX(), sprite.getY(), jPanel);
+
+            //sprite.draw(g);
+        }
+        for (int i = 0; i < enemyShots.size(); i++) {
+            Shot sprite = (Shot) enemyShots.get(i);
+            Graphics2D g2d = (Graphics2D) g;
+            g2d.drawImage(sprite.getImage(), sprite.getX(), sprite.getY(), jPanel);
+
+            //sprite.draw(g);
+        }
+
+    }
+
+    public static void endGame(JFrame frame, JPanel panel) {
+        Dashboard dashboard = new Dashboard();
+        panel.validate();
+        panel.setEnabled(false);
+        frame.setVisible(false);
+        frame.dispose();
+        dashboard.setVisible(true);
 
     }
 

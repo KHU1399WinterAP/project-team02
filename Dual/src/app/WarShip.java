@@ -17,7 +17,6 @@ import javax.swing.ImageIcon;
  */
 public class WarShip {
     private User activeUser = Database.getUser((Login.userName == null) ? Register.userName : Login.userName);
-    
     public int dx;
     public int dy;
     public int x = 170;
@@ -37,27 +36,27 @@ public class WarShip {
         ImageIcon icon; 
         switch(activeUser.getCharacterId()){
         case 1 -> {
-            icon = new ImageIcon(Links.BASECHARACTERICON + Links.CHARACTER1);
+            icon = new ImageIcon(getClass().getResource(Links.BASECHARACTERICON + Links.CHARACTER1));
             image = icon.getImage();
             }
         case 2 -> {
-            icon = new ImageIcon(Links.BASECHARACTERICON + Links.CHARACTER2);
+            icon = new ImageIcon(getClass().getResource(Links.BASECHARACTERICON + Links.CHARACTER2));
             image = icon.getImage();
             }
         case 3 -> {
-            icon = new ImageIcon(Links.BASECHARACTERICON + Links.CHARACTER3);
+            icon = new ImageIcon(getClass().getResource(Links.BASECHARACTERICON + Links.CHARACTER3));
             image = icon.getImage();
             }
         case 4 -> {
-            icon = new ImageIcon(Links.BASECHARACTERICON + Links.CHARACTER4);
+            icon = new ImageIcon(getClass().getResource(Links.BASECHARACTERICON + Links.CHARACTER4));
             image = icon.getImage();
             }
         case 5 -> {
-            icon = new ImageIcon(Links.BASECHARACTERICON + Links.CHARACTER5);
+            icon = new ImageIcon(getClass().getResource(Links.BASECHARACTERICON + Links.CHARACTER5));
             image = icon.getImage();
             }
         case 6 -> {
-            icon = new ImageIcon(Links.BASECHARACTERICON + Links.CHARACTER6);
+            icon = new ImageIcon(getClass().getResource(Links.BASECHARACTERICON + Links.CHARACTER6));
             image = icon.getImage();
             }
         

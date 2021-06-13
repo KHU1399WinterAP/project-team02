@@ -16,7 +16,6 @@ import javax.swing.JFrame;
  * @author Amir reza
  */
 public class SinglePlayerFrame extends JFrame{
-    
     private Clip clip;
     private AudioInputStream audioInputStream;
     private File audioFile;
@@ -31,13 +30,13 @@ public class SinglePlayerFrame extends JFrame{
 
 
         setVisible(true);
-        setTitle("Moving sprite");
+        setTitle("Duall");
         setSize(800, 600);
         
         setLocationRelativeTo(null);
         setResizable(false);
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-                add(new Board1(this));
+                add(new gui.SinglePlayerJPanel(this));
                 
         this.setResizable(false);
 
@@ -51,7 +50,7 @@ public class SinglePlayerFrame extends JFrame{
     public static void main(String[] args) {
 
         EventQueue.invokeLater(() -> {
-            SinglePlayerFrame ex = new SinglePlayerFrame();
+            gui.SinglePlayerFrame ex = new gui.SinglePlayerFrame();
             ex.setVisible(true);
         });
         

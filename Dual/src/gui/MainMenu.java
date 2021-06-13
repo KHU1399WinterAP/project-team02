@@ -6,8 +6,6 @@
 package gui;
 
 import app.*;
-
-import app.Links;
 import java.awt.FontFormatException;
 import java.awt.GraphicsEnvironment;
 import java.awt.image.BufferedImage;

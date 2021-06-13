@@ -5,10 +5,9 @@
  */
 package app;
 
-import gui.Board1;
-import java.awt.Graphics;
-import java.awt.image.BufferedImage;
+import java.awt.*;
 import java.util.Random;
+import gui.SinglePlayerJPanel;
 
 /**
  *
@@ -20,11 +19,11 @@ public class Opponet {
     private int y;
     private int dy;
     private int dx;
-    private BufferedImage image;
-    private Board1 game;
+    private Image image;
+    private SinglePlayerJPanel game;
     Random random;
 
-    public Opponet(int x, int y, BufferedImage image, Board1 game) {
+    public Opponet(int x, int y, Image image, SinglePlayerJPanel game) {
         this.x = x;
         this.y = y;
         this.image = image;
@@ -53,16 +52,12 @@ public class Opponet {
         return dy;
     }
 
-    public BufferedImage getImage() {
+    public Image getImage() {
         return image;
     }
 
-    public Board1 getGame() {
+    public SinglePlayerJPanel getGame() {
         return game;
-    }
-
-    public void draw(Graphics g) {
-        g.drawImage(image, x, y, null);
     }
 
     public void move() {

@@ -8,7 +8,6 @@ package app;
 import java.awt.Component;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.Icon;
@@ -26,12 +25,12 @@ public class MyIcon {
     public static Icon myIcon(String iconName, Component component ,int choose) {
         if (choose == 0) {
             try {
-            iconImage = ImageIO.read(new File(Links.BASEICON + iconName));
+            iconImage = ImageIO.read(MyIcon.class.getResource(Links.BASEICON + iconName));
         } catch (IOException e) {
         }
         }else{
         try {
-            iconImage = ImageIO.read(new File(Links.BASECHARACTERICON + iconName));
+            iconImage = ImageIO.read(MyIcon.class.getResource(Links.BASECHARACTERICON + iconName));
         } catch (IOException e) {
         }
         }
