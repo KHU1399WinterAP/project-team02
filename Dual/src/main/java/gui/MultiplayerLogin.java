@@ -1,0 +1,269 @@
+package main.java.gui;/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+import main.java.app.Database;
+import main.java.app.User;
+import main.java.utils.Utility;
+
+import javax.swing.*;
+import java.awt.*;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.net.Socket;
+
+/**
+ * @author Amir reza
+ */
+public class MultiplayerLogin extends JFrame {
+    private User activeUser = Database.getUser((Login.userName == null) ? Register.userName : Login.userName);
+    /**
+     * Creates new form MultiplayerLogin
+     */
+    private int Timer;
+    public Socket socket;
+    public static DataOutputStream dataOutputStream;
+    public static DataInputStream dataInputStream;
+    public static String opponentName;
+    private MultiPlayerFrame multiPlayerFrame;
+
+    public MultiplayerLogin() {
+        init();
+
+    }
+
+    public void init() {
+        initComponents();
+        setLocation();
+        click();
+
+    }
+
+    public void end() {
+        this.setVisible(false);
+
+    }
+
+    public void setLocation() {
+
+        Utility.centerLocation(this);
+
+    }
+
+    public void click() {
+        hostButton.addActionListener(e -> hostButtonActionPerformed());
+        joinButton.addActionListener(e -> joinButtonActionPerformed());
+
+    }
+
+    public void hostButtonActionPerformed() {
+        final JDialog loading = new JDialog();
+        JPanel p1 = new JPanel(new BorderLayout());
+        p1.add(new JLabel("Please wait..."), BorderLayout.CENTER);
+        loading.setUndecorated(true);
+        loading.getContentPane().add(p1);
+        loading.pack();
+        loading.setLocationRelativeTo(rootPane);
+        loading.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
+        loading.setModal(true);
+
+        SwingWorker<String, Void> worker = new SwingWorker<String, Void>() {
+            @Override
+            protected String doInBackground() throws InterruptedException, IOException {
+                /** Execute some operation */
+                socket = new Socket("localhost", 5000);
+                dataOutputStream = new DataOutputStream(socket.getOutputStream());
+                dataOutputStream.writeUTF("HOST");
+                dataOutputStream.writeUTF(activeUser.userName);
+                dataInputStream = new DataInputStream(socket.getInputStream());
+                opponentName = dataInputStream.readUTF();
+                multiPlayerFrame = new MultiPlayerFrame();
+                multiPlayerFrame.setVisible(true);
+
+                end();
+
+                return null;
+            }
+
+            @Override
+            protected void done() {
+                loading.dispose();
+            }
+        };
+        worker.execute();
+        loading.setVisible(true);
+        try {
+            worker.get();
+        } catch (Exception e1) {
+            e1.printStackTrace();
+        }
+    }
+
+    public void joinButtonActionPerformed() {
+        final JDialog loading = new JDialog();
+        JPanel p1 = new JPanel(new BorderLayout());
+        p1.add(new JLabel("Please wait..."), BorderLayout.CENTER);
+        loading.setUndecorated(true);
+        loading.getContentPane().add(p1);
+        loading.pack();
+        loading.setLocationRelativeTo(rootPane);
+        loading.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
+        loading.setModal(true);
+
+        SwingWorker<String, Void> worker = new SwingWorker<String, Void>() {
+            @Override
+            protected String doInBackground() throws InterruptedException, IOException {
+                /** Execute some operation */
+                socket = new Socket("localhost", 5000);
+                dataOutputStream = new DataOutputStream(socket.getOutputStream());
+                dataOutputStream.writeUTF("JOIN");
+                dataOutputStream.writeUTF(activeUser.userName);
+                dataOutputStream.writeUTF(hostTextField.getText());
+
+                dataInputStream = new DataInputStream(socket.getInputStream());
+                if (dataInputStream.readUTF().equalsIgnoreCase("FOUND")) {
+                    opponentName = dataInputStream.readUTF();
+                    System.out.println(opponentName);
+                    multiPlayerFrame = new MultiPlayerFrame();
+                    multiPlayerFrame.setVisible(true);
+
+                    end();
+                }
+                return null;
+            }
+
+            @Override
+            protected void done() {
+                loading.dispose();
+            }
+        };
+        worker.execute();
+        loading.setVisible(true);
+        try {
+            worker.get();
+        } catch (Exception e1) {
+            e1.printStackTrace();
+        }
+    }
+
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">
+    private void initComponents() {
+
+        jPanel1 = new javax.swing.JPanel();
+        hostTextField = new javax.swing.JTextField();
+        hintLable = new javax.swing.JLabel();
+        hostButton = new javax.swing.JButton();
+        joinButton = new javax.swing.JButton();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(300, 400));
+        setMinimumSize(new java.awt.Dimension(300, 400));
+        setPreferredSize(new java.awt.Dimension(300, 400));
+        setResizable(false);
+
+        hostTextField.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+
+        hintLable.setText("host name: (needed if you want to join)");
+
+        hostButton.setText("host");
+
+        joinButton.setText("join");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGap(31, 31, 31)
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                        .addComponent(hintLable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(hostTextField)))
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGap(86, 86, 86)
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(joinButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(hostButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(97, 97, 97))
+        );
+        jPanel1Layout.setVerticalGroup(
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(61, 61, 61)
+                                .addComponent(hintLable)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(hostTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(110, 110, 110)
+                                .addComponent(hostButton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(joinButton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        pack();
+    }// </editor-fold>
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(MultiplayerLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(MultiplayerLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(MultiplayerLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(MultiplayerLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new MultiplayerLogin().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify
+    private javax.swing.JLabel hintLable;
+    private javax.swing.JButton hostButton;
+    private javax.swing.JTextField hostTextField;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton joinButton;
+    // End of variables declaration
+}
