@@ -73,7 +73,7 @@ public class ClientHandler extends Thread {
 
                         int x = Integer.parseInt(DATA_INPUT_STREAM.readUTF());
                         int y = Integer.parseInt(DATA_INPUT_STREAM.readUTF());
-                        GameManger.sendShotPosition(opponent, 633 - x, (-1) * y);
+                        GameManger.sendShotPosition(opponent, x, y);
                         System.out.println("getting fire done");
 
 
