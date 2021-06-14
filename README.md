@@ -27,9 +27,14 @@ It's easy to pick up and play any of the competitive or cooperative modes: Singl
 7. Open the file 
 8. Run the project
 9. Enjoy the game
+## To play multiplayer mode:
+1. First Run the server project of the game
+2. Now in the game the first player must click "host" button to be the host of the game
+3. the second player must write the first player's username and then click "join" button
+4. Now compete with each other :)
 
 ## Teacher assistant :
 * Bijan Easapour
 
 ## Programmer :
-Amir_Reza Zare 992023019
+* Amir_Reza Zare 992023019
