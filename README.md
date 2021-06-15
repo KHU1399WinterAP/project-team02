@@ -19,14 +19,24 @@ It's easy to pick up and play any of the competitive or cooperative modes: Singl
 
 ## How to run the game :
 1. Make a new folder on your system
-2. Download MySQL connector java
-3. Open Windows PowerShell 
-4. Copy our project http URL
-5. git clone (URL)
-6. Open intellij Idea
-7. Open the file 
-8. Run the project
-9. Enjoy the game
+2. Open Windows PowerShell 
+3. Copy our project http URL
+4. git clone (URL)
+5. install MYSQL Workbench(for database and authentication System)
+6. downlowd MYSQl connector java
+7. Follow the address below inorder to add the jarfile to your project.
+  * File > project structure > Libraries > plus(+) > java > find the jarfile you have dowmloaded from links above
+8. create a table with these columns:
+ * username
+ * password
+ * settingid
+ * totalwins
+ * totallosts
+ * avatarid
+ * characteid
+10. Open the file 
+11. Run the project
+12. Enjoy the game
 ## To play multiplayer mode:
 1. First Run the server project of the game
 2. Now in the game the first player must click "host" button to be the host of the game
