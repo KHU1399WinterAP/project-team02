@@ -25,8 +25,10 @@ It's easy to pick up and play any of the competitive or cooperative modes: Singl
 5. install MYSQL Workbench(for database and authentication System)
 6. downlowd MYSQl connector java
 7. Follow the address below inorder to add the jarfile to your project.
-  * File > project structure > Libraries > plus(+) > java > find the jarfile you have dowmloaded from links above
-8. create a table with these columns:
+  * File > project structure > Libraries > plus(+) > java > find the jarfile you have dowmloaded
+8. create your own database
+9. change the DATABASE_URL , USERNAME and PASSWORD in the project
+10. create a table with these columns in your database schema:
  * username
  * password
  * settingid
@@ -34,9 +36,9 @@ It's easy to pick up and play any of the competitive or cooperative modes: Singl
  * totallosts
  * avatarid
  * characteid
-10. Open the file 
-11. Run the project
-12. Enjoy the game
+11. Open the file 
+12. Run the project
+13. Enjoy the game
 ## To play multiplayer mode:
 1. First Run the server project of the game
 2. Now in the game the first player must click "host" button to be the host of the game
