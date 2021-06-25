@@ -22,7 +22,6 @@ public class Server extends Thread {
 
         while (true) {
             try {
-                System.out.println("Listening on port " + PORT + " ...");
                 GameManger.addSocket(LISTENER.accept());
             } catch (IOException e) {
                 e.printStackTrace();

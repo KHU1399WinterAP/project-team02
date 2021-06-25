@@ -159,7 +159,7 @@ public class MultiplayerLogin extends JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         hostTextField = new javax.swing.JTextField();
-        hintLable = new javax.swing.JLabel();
+        hintLabel = new javax.swing.JLabel();
         hostButton = new javax.swing.JButton();
         joinButton = new javax.swing.JButton();
 
@@ -171,7 +171,7 @@ public class MultiplayerLogin extends JFrame {
 
         hostTextField.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
 
-        hintLable.setText("host name: (needed if you want to join)");
+        hintLabel.setText("host name: (needed if you want to join)");
 
         hostButton.setText("host");
 
@@ -186,7 +186,7 @@ public class MultiplayerLogin extends JFrame {
                                         .addGroup(jPanel1Layout.createSequentialGroup()
                                                 .addGap(31, 31, 31)
                                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                        .addComponent(hintLable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(hintLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                         .addComponent(hostTextField)))
                                         .addGroup(jPanel1Layout.createSequentialGroup()
                                                 .addGap(86, 86, 86)
@@ -199,7 +199,7 @@ public class MultiplayerLogin extends JFrame {
                 jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(61, 61, 61)
-                                .addComponent(hintLable)
+                                .addComponent(hintLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(hostTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(110, 110, 110)
@@ -259,7 +259,7 @@ public class MultiplayerLogin extends JFrame {
     }
 
     // Variables declaration - do not modify
-    private javax.swing.JLabel hintLable;
+    private javax.swing.JLabel hintLabel;
     private javax.swing.JButton hostButton;
     private javax.swing.JTextField hostTextField;
     private javax.swing.JPanel jPanel1;

@@ -22,7 +22,7 @@ public class MyFont extends Font {
             Font font = null;
             try {
 
-                var stream = Links.class.getClassLoader().getResourceAsStream(Links.BASEFONT + fontName);
+                var stream = Links.class.getClassLoader().getResourceAsStream(Links.BASE_FONT + fontName);
                 if (stream == null)
                     throw new FileNotFoundException();
 

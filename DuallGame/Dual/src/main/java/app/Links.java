@@ -11,7 +11,7 @@ package main.java.app;
  */
 public class Links {
 
-    public static final String BASEFONT = "main/resources/fonts/";
+    public static final String BASE_FONT = "main/resources/fonts/";
     public static final String MAIN_FONT = "DEADLYFINISHER.ttf";
 
     public static final String DASHBOARD_ICON = "dashboardicon.png";

@@ -8,7 +8,6 @@ package main.java.gui;
 import main.java.app.*;
 
 import java.awt.FontFormatException;
-import java.awt.GraphicsEnvironment;
 import java.awt.image.BufferedImage;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -26,7 +25,6 @@ public class MainMenu extends javax.swing.JFrame {
 
     private ImageIcon imageIcon;
     BufferedImage img = null;
-    GraphicsEnvironment ge;
 
     /*
      * Creates new form MainMenu
@@ -63,7 +61,7 @@ public class MainMenu extends javax.swing.JFrame {
     }
 
     private void setMyIcon() {
-        mainIconLable.setIcon(MyIcon.myIcon(Links.MAIN_REGISTER_LOGIN_ICON, mainIconLable, 0));
+        mainIconLabel.setIcon(MyIcon.myIcon(Links.MAIN_REGISTER_LOGIN_ICON, mainIconLabel, 0));
     }
 
     private void setMyThem() {
@@ -90,7 +88,7 @@ public class MainMenu extends javax.swing.JFrame {
     private void initComponents() {
 
         mainIconPanel = new javax.swing.JPanel();
-        mainIconLable = new javax.swing.JLabel(imageIcon);
+        mainIconLabel = new javax.swing.JLabel(imageIcon);
         mainOptionPanel = new javax.swing.JPanel();
         registerButton = new javax.swing.JButton();
         loginButton = new javax.swing.JButton();
@@ -102,17 +100,17 @@ public class MainMenu extends javax.swing.JFrame {
 
         mainIconPanel.setPreferredSize(new java.awt.Dimension(400, 600));
 
-        mainIconLable.setText("jLabel1");
+        mainIconLabel.setText("jLabel1");
 
         javax.swing.GroupLayout mainIconPanelLayout = new javax.swing.GroupLayout(mainIconPanel);
         mainIconPanel.setLayout(mainIconPanelLayout);
         mainIconPanelLayout.setHorizontalGroup(
                 mainIconPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(mainIconLable, javax.swing.GroupLayout.DEFAULT_SIZE, 401, Short.MAX_VALUE)
+                        .addComponent(mainIconLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 401, Short.MAX_VALUE)
         );
         mainIconPanelLayout.setVerticalGroup(
                 mainIconPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(mainIconLable, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
+                        .addComponent(mainIconLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
         );
 
         mainOptionPanel.setPreferredSize(new java.awt.Dimension(400, 600));
@@ -253,7 +251,7 @@ public class MainMenu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton exitButton;
     private javax.swing.JButton loginButton;
-    private javax.swing.JLabel mainIconLable;
+    private javax.swing.JLabel mainIconLabel;
     private javax.swing.JPanel mainIconPanel;
     private javax.swing.JPanel mainOptionPanel;
     private javax.swing.JButton registerButton;

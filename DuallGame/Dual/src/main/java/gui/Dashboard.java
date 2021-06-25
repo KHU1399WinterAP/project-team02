@@ -59,8 +59,8 @@ public class Dashboard extends javax.swing.JFrame {
     }
 
     public void setIcon() {
-        iconLable.setIcon(MyIcon.myIcon(Links.DASHBOARD_ICON, iconLable, 0));
-        setSpaceShipCharacter(activeUser, avatarLable);
+        iconLabel.setIcon(MyIcon.myIcon(Links.DASHBOARD_ICON, iconLabel, 0));
+        setSpaceShipCharacter(activeUser, avatarLabel);
     }
 
     private static void setSpaceShipCharacter(User activeUser, JLabel avatarLable) {
@@ -77,22 +77,22 @@ public class Dashboard extends javax.swing.JFrame {
     }
 
     private void setDarkIcon() {
-        iconLable.setIcon(MyIcon.myIcon(Links.DARK_DASHBOARD_ICON, iconLable, 0));
-        setSpaceShipCharacter(activeUser, avatarLable);
+        iconLabel.setIcon(MyIcon.myIcon(Links.DARK_DASHBOARD_ICON, iconLabel, 0));
+        setSpaceShipCharacter(activeUser, avatarLabel);
     }
 
     private void setForeground() {
         //new Color(12, 174, 75)
         multiPlayerButton.setForeground(MyColor.white);
         singlePlayerButton.setForeground(MyColor.white);
-        userNameLable.setForeground(MyColor.white);
+        userNameLabel.setForeground(MyColor.white);
         logOutButton.setForeground(MyColor.white);
         themButton.setForeground(MyColor.white);
-        appNameLable.setForeground(MyColor.white);
+        appNameLabel.setForeground(MyColor.white);
         changeCharacter.setForeground(MyColor.white);
-        totalLostsLable.setForeground(MyColor.white);
+        totalLostsLabel.setForeground(MyColor.white);
         totalLostsNumber.setForeground(MyColor.white);
-        totalwWinsLable.setForeground(MyColor.white);
+        totalWinsLabel.setForeground(MyColor.white);
         totalWinsNumber.setForeground(MyColor.white);
 
     }
@@ -100,14 +100,14 @@ public class Dashboard extends javax.swing.JFrame {
     private void setDarkForeground() {
         multiPlayerButton.setForeground(MyColor.DARK_FONT);
         singlePlayerButton.setForeground(MyColor.DARK_FONT);
-        userNameLable.setForeground(MyColor.DARK_FONT);
+        userNameLabel.setForeground(MyColor.DARK_FONT);
         logOutButton.setForeground(MyColor.DARK_FONT);
         themButton.setForeground(MyColor.DARK_FONT);
-        appNameLable.setForeground(MyColor.DARK_FONT);
+        appNameLabel.setForeground(MyColor.DARK_FONT);
         changeCharacter.setForeground(MyColor.DARK_FONT);
-        totalLostsLable.setForeground(MyColor.DARK_FONT);
+        totalLostsLabel.setForeground(MyColor.DARK_FONT);
         totalLostsNumber.setForeground(MyColor.DARK_FONT);
-        totalwWinsLable.setForeground(MyColor.DARK_FONT);
+        totalWinsLabel.setForeground(MyColor.DARK_FONT);
         totalWinsNumber.setForeground(MyColor.DARK_FONT);
 
     }
@@ -132,11 +132,11 @@ public class Dashboard extends javax.swing.JFrame {
         singlePlayerButton.setBackground(MyColor.MY_GREEN);
         logOutButton.setBackground(MyColor.MY_GREEN);
         themButton.setBackground(MyColor.MY_GREEN);
-        appNameLable.setBackground(MyColor.MY_RED);
+        appNameLabel.setBackground(MyColor.MY_RED);
         changeCharacter.setBackground(MyColor.MY_GREEN);
-        totalLostsLable.setBackground(MyColor.MY_GREEN);
+        totalLostsLabel.setBackground(MyColor.MY_GREEN);
         totalLostsNumber.setBackground(MyColor.MY_GREEN);
-        totalwWinsLable.setBackground(MyColor.MY_GREEN);
+        totalWinsLabel.setBackground(MyColor.MY_GREEN);
         totalWinsNumber.setBackground(MyColor.MY_GREEN);
 
     }
@@ -147,11 +147,11 @@ public class Dashboard extends javax.swing.JFrame {
         singlePlayerButton.setBackground(MyColor.DARK_BUTTON_COLOR);
         logOutButton.setBackground(MyColor.DARK_BUTTON_COLOR);
         themButton.setBackground(MyColor.DARK_BUTTON_COLOR);
-        appNameLable.setBackground(MyColor.DARK_BACKGROUND);
+        appNameLabel.setBackground(MyColor.DARK_BACKGROUND);
         changeCharacter.setBackground(MyColor.DARK_BUTTON_COLOR);
-        totalLostsLable.setBackground(MyColor.DARK_BUTTON_COLOR);
+        totalLostsLabel.setBackground(MyColor.DARK_BUTTON_COLOR);
         totalLostsNumber.setBackground(MyColor.DARK_BUTTON_COLOR);
-        totalwWinsLable.setBackground(MyColor.DARK_BUTTON_COLOR);
+        totalWinsLabel.setBackground(MyColor.DARK_BUTTON_COLOR);
         totalWinsNumber.setBackground(MyColor.DARK_BUTTON_COLOR);
 
     }
@@ -159,15 +159,15 @@ public class Dashboard extends javax.swing.JFrame {
     private void setText() {
         multiPlayerButton.setText("<html>Multi<br />Player</html>");
         logOutButton.setText("LogOut");
-        userNameLable.setText("username");
+        userNameLabel.setText("username");
         singlePlayerButton.setText("<html>Single<br />Player</html>");
         themButton.setText("Them");
-        appNameLable.setText("Duall");
-        iconLable.setText("");
+        appNameLabel.setText("Duall");
+        iconLabel.setText("");
         changeCharacter.setText("Change Character");
-        userNameLable.setText(activeUser.getUserName());
-        totalLostsLable.setText("<html>Total<br />Losts</html>");
-        totalwWinsLable.setText("<html>Total<br />Wins</html>");
+        userNameLabel.setText(activeUser.getUserName());
+        totalLostsLabel.setText("<html>Total<br />Losts</html>");
+        totalWinsLabel.setText("<html>Total<br />Wins</html>");
         totalWinsNumber.setText(String.valueOf(activeUser.getTotalWins()));
         totalLostsNumber.setText(String.valueOf(activeUser.getTotalLosts()));
 
@@ -175,24 +175,24 @@ public class Dashboard extends javax.swing.JFrame {
 
     private void setFont() throws FontFormatException, IOException {
         MyFont.setMyFont(Links.MAIN_FONT, MyFont.PLAIN, 15, logOutButton);
-        MyFont.setMyFont(Links.MAIN_FONT, MyFont.PLAIN, 30, userNameLable);
+        MyFont.setMyFont(Links.MAIN_FONT, MyFont.PLAIN, 30, userNameLabel);
         MyFont.setMyFont(Links.MAIN_FONT, MyFont.PLAIN, 40, singlePlayerButton);
         MyFont.setMyFont(Links.MAIN_FONT, MyFont.PLAIN, 40, multiPlayerButton);
         MyFont.setMyFont(Links.MAIN_FONT, MyFont.PLAIN, 15, themButton);
         MyFont.setMyFont(Links.MAIN_FONT, MyFont.PLAIN, 20, changeCharacter);
-        MyFont.setMyFont(Links.MAIN_FONT, MyFont.PLAIN, 30, totalLostsLable);
-        MyFont.setMyFont(Links.MAIN_FONT, MyFont.PLAIN, 30, totalwWinsLable);
-        appNameLable.setFont(new Font(MyFont.MONOSPACED, Font.BOLD, 35));
+        MyFont.setMyFont(Links.MAIN_FONT, MyFont.PLAIN, 30, totalLostsLabel);
+        MyFont.setMyFont(Links.MAIN_FONT, MyFont.PLAIN, 30, totalWinsLabel);
+        appNameLabel.setFont(new Font(MyFont.MONOSPACED, Font.BOLD, 35));
         totalWinsNumber.setFont(new Font(MyFont.MONOSPACED, Font.BOLD, 35));
         totalLostsNumber.setFont(new Font(MyFont.MONOSPACED, Font.BOLD, 35));
     }
 
     private void click() {
-        avatarLable.addMouseListener(new MouseAdapter() {
+        avatarLabel.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
 
-                PickAvatar pickAvatar = new PickAvatar(x, y, avatarLable);
+                PickAvatar pickAvatar = new PickAvatar(x, y, avatarLabel);
 
                 pickAvatar.setVisible(true);
 
@@ -213,18 +213,18 @@ public class Dashboard extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        iconLable = new javax.swing.JLabel();
+        iconLabel = new javax.swing.JLabel();
         changeCharacter = new javax.swing.JButton();
         multiPlayerButton = new javax.swing.JButton();
         singlePlayerButton = new javax.swing.JButton();
         logOutButton = new javax.swing.JButton();
         themButton = new javax.swing.JButton();
-        userNameLable = new javax.swing.JLabel();
-        appNameLable = new javax.swing.JLabel();
-        avatarLable = new javax.swing.JLabel();
+        userNameLabel = new javax.swing.JLabel();
+        appNameLabel = new javax.swing.JLabel();
+        avatarLabel = new javax.swing.JLabel();
         totalWinsNumber = new javax.swing.JLabel();
-        totalwWinsLable = new javax.swing.JLabel();
-        totalLostsLable = new javax.swing.JLabel();
+        totalWinsLabel = new javax.swing.JLabel();
+        totalLostsLabel = new javax.swing.JLabel();
         totalLostsNumber = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -233,7 +233,7 @@ public class Dashboard extends javax.swing.JFrame {
 
         jPanel1.setPreferredSize(new java.awt.Dimension(810, 600));
 
-        iconLable.setText("jLabel1");
+        iconLabel.setText("jLabel1");
 
         changeCharacter.setText("jButton5");
         changeCharacter.addActionListener(evt -> changeCharacterActionPerformed(evt));
@@ -254,17 +254,17 @@ public class Dashboard extends javax.swing.JFrame {
         themButton.setText("jButton1");
         themButton.addActionListener(evt -> themButtonActionPerformed(evt));
 
-        userNameLable.setText("jLabel1");
+        userNameLabel.setText("jLabel1");
 
-        appNameLable.setText("jLabel1");
+        appNameLabel.setText("jLabel1");
 
-        avatarLable.setText("jLabel1");
+        avatarLabel.setText("jLabel1");
 
         totalWinsNumber.setText("jLabel1");
 
-        totalwWinsLable.setText("jLabel1");
+        totalWinsLabel.setText("jLabel1");
 
-        totalLostsLable.setText("jLabel2");
+        totalLostsLabel.setText("jLabel2");
 
         totalLostsNumber.setText("jLabel3");
 
@@ -276,21 +276,21 @@ public class Dashboard extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(jPanel1Layout.createSequentialGroup()
                                                 .addContainerGap()
-                                                .addComponent(avatarLable, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(avatarLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(48, 48, 48)
-                                                .addComponent(userNameLable, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(userNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(379, 379, 379)
                                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                        .addComponent(iconLable, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
-                                                        .addComponent(appNameLable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                                        .addComponent(iconLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
+                                                        .addComponent(appNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                                         .addGroup(jPanel1Layout.createSequentialGroup()
                                                 .addGap(26, 26, 26)
                                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                                         .addGroup(jPanel1Layout.createSequentialGroup()
                                                                 .addGap(38, 38, 38)
                                                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                                        .addComponent(totalwWinsLable, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                        .addComponent(totalLostsLable, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                        .addComponent(totalWinsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addComponent(totalLostsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                                 .addGap(48, 48, 48)
                                                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                                         .addComponent(totalWinsNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -315,23 +315,23 @@ public class Dashboard extends javax.swing.JFrame {
                                                 .addContainerGap()
                                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                         .addGroup(jPanel1Layout.createSequentialGroup()
-                                                                .addComponent(appNameLable, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addComponent(appNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                .addComponent(iconLable, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                        .addComponent(userNameLable, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                                .addComponent(iconLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addComponent(userNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addGroup(jPanel1Layout.createSequentialGroup()
                                                 .addGap(21, 21, 21)
-                                                .addComponent(avatarLable, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addComponent(avatarLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(singlePlayerButton, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(totalwWinsLable, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(userNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(totalWinsNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(jPanel1Layout.createSequentialGroup()
                                                 .addGap(28, 28, 28)
                                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(totalLostsLable, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(totalLostsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addComponent(totalLostsNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addGroup(jPanel1Layout.createSequentialGroup()
                                                 .addGap(45, 45, 45)
@@ -459,19 +459,19 @@ public class Dashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel appNameLable;
-    private javax.swing.JLabel avatarLable;
+    private javax.swing.JLabel appNameLabel;
+    private javax.swing.JLabel avatarLabel;
     private javax.swing.JButton changeCharacter;
-    private javax.swing.JLabel iconLable;
+    private javax.swing.JLabel iconLabel;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton logOutButton;
     private javax.swing.JButton multiPlayerButton;
     private javax.swing.JButton singlePlayerButton;
     private javax.swing.JButton themButton;
-    private javax.swing.JLabel totalLostsLable;
+    private javax.swing.JLabel totalLostsLabel;
     private javax.swing.JLabel totalLostsNumber;
     private javax.swing.JLabel totalWinsNumber;
-    private javax.swing.JLabel totalwWinsLable;
-    private javax.swing.JLabel userNameLable;
+    private javax.swing.JLabel totalWinsLabel;
+    private javax.swing.JLabel userNameLabel;
     // End of variables declaration//GEN-END:variables
 }

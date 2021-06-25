@@ -56,7 +56,6 @@ public class GameManger {
                     CLIENT_HANDLERS.get(i).DATA_OUTPUT_STREAM.writeUTF("FIRE");
                     CLIENT_HANDLERS.get(i).DATA_OUTPUT_STREAM.writeUTF(String.valueOf(x));
                     CLIENT_HANDLERS.get(i).DATA_OUTPUT_STREAM.writeUTF(String.valueOf(y));
-                    System.out.println("giving fir to : " + opponent + " done");
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -89,7 +88,6 @@ public class GameManger {
 
                 try {
                     CLIENT_HANDLERS.get(i).DATA_OUTPUT_STREAM.writeUTF("WON");
-                    System.out.println("giving " + winnerName + " won");
 
                 } catch (IOException e) {
                     e.printStackTrace();

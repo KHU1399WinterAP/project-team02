@@ -54,7 +54,6 @@ public class ClientHandler extends Thread {
 
                         String hostName = DATA_INPUT_STREAM.readUTF();
 
-                        // var message = DATA_INPUT_STREAM.readUTF();
 
                         if (GameManger.searchHost(hostName)) {
 
@@ -68,13 +67,11 @@ public class ClientHandler extends Thread {
                         break;
 
                     case "FIRE":
-                        System.out.println("getting fire...");
                         String opponent = DATA_INPUT_STREAM.readUTF();
 
                         int x = Integer.parseInt(DATA_INPUT_STREAM.readUTF());
                         int y = Integer.parseInt(DATA_INPUT_STREAM.readUTF());
                         GameManger.sendShotPosition(opponent, x, y);
-                        System.out.println("getting fire done");
 
 
                         break;

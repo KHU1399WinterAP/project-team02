@@ -74,21 +74,21 @@ public class Register extends javax.swing.JFrame {
     }
 
     private void setIcon() {
-        iconLable.setIcon(MyIcon.myIcon(Links.MAIN_REGISTER_LOGIN_ICON, iconLable, 0));
+        iconLabel.setIcon(MyIcon.myIcon(Links.MAIN_REGISTER_LOGIN_ICON, iconLabel, 0));
     }
 
     private void setForeground() {
         //new Color(12, 174, 75)
         registerButton.setForeground(MyColor.BLACK);
         BackToMainButton.setForeground(MyColor.BLACK);
-        userNameLable.setForeground(MyColor.BLACK);
-        passwordLable.setForeground(MyColor.BLACK);
+        userNameLabel.setForeground(MyColor.BLACK);
+        passwordLabel.setForeground(MyColor.BLACK);
     }
 
     private void setBackground() {
         registerButton.setBackground(MyColor.WHITE);
-        passwordFeild.setBackground(MyColor.WHITE);
-        userNameFeild.setBackground(MyColor.WHITE);
+        passwordField.setBackground(MyColor.WHITE);
+        userNameField.setBackground(MyColor.WHITE);
         BackToMainButton.setBackground(MyColor.WHITE);
         jPanel2.setBackground(MyColor.MY_GREEN);
 
@@ -97,17 +97,17 @@ public class Register extends javax.swing.JFrame {
     private void setText() {
         registerButton.setText("Register");
         BackToMainButton.setText("Back");
-        userNameLable.setText("username");
-        passwordLable.setText("password");
-        userNameFeild.setText("");
-        passwordFeild.setText("");
+        userNameLabel.setText("username");
+        passwordLabel.setText("password");
+        userNameField.setText("");
+        passwordField.setText("");
 
     }
 
     private void setFont() throws FontFormatException, IOException {
         MyFont.setMyFont(Links.MAIN_FONT, MyFont.PLAIN, 30, registerButton);
-        MyFont.setMyFont(Links.MAIN_FONT, MyFont.PLAIN, 30, userNameLable);
-        MyFont.setMyFont(Links.MAIN_FONT, MyFont.PLAIN, 30, passwordLable);
+        MyFont.setMyFont(Links.MAIN_FONT, MyFont.PLAIN, 30, userNameLabel);
+        MyFont.setMyFont(Links.MAIN_FONT, MyFont.PLAIN, 30, passwordLabel);
         MyFont.setMyFont(Links.MAIN_FONT, MyFont.PLAIN, 30, BackToMainButton);
     }
 
@@ -121,12 +121,12 @@ public class Register extends javax.swing.JFrame {
     private void initComponents() {
 
         iconPanel = new javax.swing.JPanel();
-        iconLable = new javax.swing.JLabel(imageIcon);
+        iconLabel = new javax.swing.JLabel(imageIcon);
         jPanel2 = new javax.swing.JPanel();
-        userNameLable = new javax.swing.JLabel();
-        passwordLable = new javax.swing.JLabel();
-        passwordFeild = new javax.swing.JPasswordField();
-        userNameFeild = new javax.swing.JTextField();
+        userNameLabel = new javax.swing.JLabel();
+        passwordLabel = new javax.swing.JLabel();
+        passwordField = new javax.swing.JPasswordField();
+        userNameField = new javax.swing.JTextField();
         registerButton = new javax.swing.JButton();
         BackToMainButton = new javax.swing.JButton();
 
@@ -136,31 +136,31 @@ public class Register extends javax.swing.JFrame {
 
         iconPanel.setPreferredSize(new java.awt.Dimension(400, 600));
 
-        iconLable.setText("jLabel1");
+        iconLabel.setText("jLabel1");
 
         javax.swing.GroupLayout iconPanelLayout = new javax.swing.GroupLayout(iconPanel);
         iconPanel.setLayout(iconPanelLayout);
         iconPanelLayout.setHorizontalGroup(
                 iconPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(iconLable, javax.swing.GroupLayout.DEFAULT_SIZE, 372, Short.MAX_VALUE)
+                        .addComponent(iconLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 372, Short.MAX_VALUE)
         );
         iconPanelLayout.setVerticalGroup(
                 iconPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(iconLable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(iconLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        userNameLable.setText("username");
+        userNameLabel.setText("username");
 
-        passwordLable.setText("password");
+        passwordLabel.setText("password");
 
-        passwordFeild.setText("jPasswordField1");
-        passwordFeild.addActionListener(new java.awt.event.ActionListener() {
+        passwordField.setText("jPasswordField1");
+        passwordField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 passwordFeildActionPerformed(evt);
             }
         });
 
-        userNameFeild.setText("jTextField1");
+        userNameField.setText("jTextField1");
 
         registerButton.setText("Register");
         registerButton.addActionListener(new java.awt.event.ActionListener() {
@@ -182,14 +182,14 @@ public class Register extends javax.swing.JFrame {
                 jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(userNameLable, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(userNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                 .addGroup(jPanel2Layout.createSequentialGroup()
                                                         .addGap(121, 121, 121)
                                                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                                .addComponent(userNameFeild)
-                                                                .addComponent(passwordFeild, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
-                                                                .addComponent(passwordLable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                                                .addComponent(userNameField)
+                                                                .addComponent(passwordField, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
+                                                                .addComponent(passwordLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                                                 .addGroup(jPanel2Layout.createSequentialGroup()
                                                         .addGap(150, 150, 150)
                                                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -201,13 +201,13 @@ public class Register extends javax.swing.JFrame {
                 jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(129, 129, 129)
-                                .addComponent(userNameLable)
+                                .addComponent(userNameLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(userNameFeild, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(userNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(29, 29, 29)
-                                .addComponent(passwordLable)
+                                .addComponent(passwordLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(passwordFeild, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(97, 97, 97)
                                 .addComponent(registerButton)
                                 .addGap(18, 18, 18)
@@ -235,14 +235,14 @@ public class Register extends javax.swing.JFrame {
 
     private void registerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerButtonActionPerformed
 
-        userName = userNameFeild.getText();
+        userName = userNameField.getText();
         int check = Database.countUser(userName);
 
         switch (check) {
 
             case 0 -> {
 
-                Database.insertIntoUsers(new User(userNameFeild.getText(), passwordFeild.getPassword(), 0, 0, 0, 1, 1));
+                Database.insertIntoUsers(new User(userNameField.getText(), passwordField.getPassword(), 0, 0, 0, 1, 1));
                 JOptionPane.showMessageDialog(rootPane, "You successfully have registered!");
                 this.dispose();
                 Dashboard dashboard = new Dashboard();
@@ -252,8 +252,8 @@ public class Register extends javax.swing.JFrame {
 
             case 1 -> {
                 JOptionPane.showMessageDialog(rootPane, "This username is not available!");
-                userNameFeild.setText("");
-                passwordFeild.setText("");
+                userNameField.setText("");
+                passwordField.setText("");
             }
         }
 
@@ -309,13 +309,13 @@ public class Register extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BackToMainButton;
-    private javax.swing.JLabel iconLable;
+    private javax.swing.JLabel iconLabel;
     private javax.swing.JPanel iconPanel;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPasswordField passwordFeild;
-    private javax.swing.JLabel passwordLable;
+    private javax.swing.JPasswordField passwordField;
+    private javax.swing.JLabel passwordLabel;
     private javax.swing.JButton registerButton;
-    private javax.swing.JTextField userNameFeild;
-    private javax.swing.JLabel userNameLable;
+    private javax.swing.JTextField userNameField;
+    private javax.swing.JLabel userNameLabel;
     // End of variables declaration//GEN-END:variables
 }
